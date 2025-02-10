@@ -5,6 +5,7 @@
 ﻿
   "properties": {
     "sections": {
+      "type": "array",
       "items": {
         "$ref": "#/$defs/sectionsItem"
       }
