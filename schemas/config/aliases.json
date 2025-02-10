@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/config.json",
+  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json",
 
   "type": "object",
   "properties": {
     "components": {
       "$ref": "#/$defs/aliasesObject"
     },
-    "components": {
+    "templates": {
       "$ref": "#/$defs/aliasesObject"
     }
   },
