@@ -4,8 +4,26 @@
   "type": "object",
 ﻿
   "properties": {
-    "sections": { "type": "array" }
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/sectionsItem"
+      }
+    }
   },
 ﻿
-  "required": ["sections"]
+  "required": ["sections"],
+
+  "$defs": {
+    "sectionsItem": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    }
+  }
 }
