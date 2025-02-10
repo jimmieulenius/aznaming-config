@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/config.json",
   "type": "object",
-﻿
+
   "properties": {
     "sections": {
       "type": "array",
@@ -11,8 +11,10 @@
       }
     }
   },
-﻿
-  "required": ["sections"],
+
+  "required": [
+    "sections"
+  ],
 
   "$defs": {
     "sectionsItem": {
