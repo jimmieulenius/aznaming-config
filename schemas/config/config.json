@@ -4,7 +4,7 @@
   "type": "object",
 
   "properties": {
-    "sections_ss": {
+    "sections": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/sectionsItem"
