@@ -3,6 +3,9 @@
   "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/restApi.json",
 
   "type": "object",
+  "properties": {
+    "$schema": { "type": "string" }
+  },
   "patternProperties": {
     ".": {
       "type": "object",
