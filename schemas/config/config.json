@@ -30,6 +30,9 @@
         },
         "aliases": {
           "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json"
+        },
+        "restApi": {
+          "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/restApi.json"
         }
       }
     }
