@@ -12,5 +12,6 @@
     "$schema": {
       "type": "string"
     }
-  }
+  },
+  "additionalProperties": true
 }
