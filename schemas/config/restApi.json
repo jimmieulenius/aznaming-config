@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/restApi.json",
+
+  "type": "object",
+  "patternProperties": {
+    ".": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string"
+        },
+        "requests": {
+          "type": "object",
+          "patternProperties": {
+            ".": {
+              "type": "object",
+              "properties": {
+                "uri": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                  "uri"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+          "apiVersion",
+          "requests"
+      ]
+    }
+  }
+}
