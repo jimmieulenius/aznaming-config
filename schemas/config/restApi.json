@@ -4,7 +4,9 @@
 
   "type": "object",
   "properties": {
-    "$schema": { "type": "string" }
+    "$schema": {
+      "type": "string"
+    }
   },
   "patternProperties": {
     ".": {
