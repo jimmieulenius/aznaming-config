@@ -18,6 +18,10 @@
               "properties": {
                 "uri": {
                   "type": "string"
+                },
+                "body": {
+                  "type": "object",
+                  "additionalProperties": true
                 }
               },
               "required": [
