@@ -21,7 +21,7 @@
 
     {
       "type": "object",
-      "properties"; {
+      "properties": {
         "aliases": {
           "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json"
         }
