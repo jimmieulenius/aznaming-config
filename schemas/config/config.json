@@ -7,6 +7,9 @@
     {
       "type": "object",
       "properties": {
+        "$schema": {
+          "type": "string"
+        },
         "sections": {
           "type": "array",
           "items": {
@@ -22,6 +25,9 @@
     {
       "type": "object",
       "properties": {
+        "$schema": {
+          "type": "string"
+        },
         "aliases": {
           "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json"
         }
