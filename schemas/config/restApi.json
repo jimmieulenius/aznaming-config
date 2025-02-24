@@ -5,16 +5,16 @@
   "allOf": [
 
     {
+      "$ref": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
+    },
+
+    {
       "type": "object",
       "properties": {
         "$schema": {
           "type": "string"
         }
       }
-    },
-
-    {
-      "$ref": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
     }
     
   ]
