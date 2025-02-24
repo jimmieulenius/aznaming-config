@@ -13,5 +13,5 @@
       "type": "string"
     }
   },
-  "additionalProperties": true
+  "unevaluatedProperties": true
 }
