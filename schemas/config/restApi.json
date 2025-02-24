@@ -8,38 +8,7 @@
       "type": "string"
     }
   },
-  "patternProperties": {
-    ".": {
-      "type": "object",
-      "properties": {
-        "apiVersion": {
-          "type": "string"
-        },
-        "requests": {
-          "type": "object",
-          "patternProperties": {
-            ".": {
-              "type": "object",
-              "properties": {
-                "uri": {
-                  "type": "string"
-                },
-                "body": {
-                  "type": "object",
-                  "additionalProperties": true
-                }
-              },
-              "required": [
-                  "uri"
-              ]
-            }
-          }
-        }
-      },
-      "required": [
-          "apiVersion",
-          "requests"
-      ]
-    }
+  {
+    "$ref": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
   }
 }
