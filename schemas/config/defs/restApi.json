@@ -4,7 +4,7 @@
 
   "type": "object",
   "patternProperties": {
-    "^(.|!\\$schema$)": {
+    "^(!\\$schema$)": {
       "type": "object",
       "properties": {
         "apiVersion": {
