@@ -5,13 +5,15 @@
   "allOf": [
     {
       "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
-    }
-  ],
+    },
 
-  "properties": {
-    "aaa": {
-      "type": "string"
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        }
+      }
     }
-  },
-  "unevaluatedProperties": true
+  ]
 }
