@@ -9,7 +9,7 @@
   ],
 
   "properties": {
-    "$schema": {
+    "aaa": {
       "type": "string"
     }
   },
