@@ -10,7 +10,11 @@
 
   "properties": {
     "$schema": {
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     }
-  }
+  },
+
+  "required": ["$schema"],
+  "additionalProperties": false
 }
