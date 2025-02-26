@@ -4,7 +4,7 @@
 
   "type": "object",
   "patternProperties": {
-    "^[a-z0-9]+$": {
+    "!^\\$": {
       "type": "object",
       "properties": {
         "apiVersion": {
