@@ -15,6 +15,5 @@
     }
   },
 
-  "required": ["$schema"],
-  "additionalProperties": false
+  "required": ["$schema"]
 }
