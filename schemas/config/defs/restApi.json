@@ -17,7 +17,8 @@
               "type": "object",
               "properties": {
                 "uri": {
-                  "type": "string"
+                  "type": "string",
+                  "format": "uri"
                 },
                 "body": {
                   "type": "object",
@@ -36,5 +37,6 @@
           "requests"
       ]
     }
-  }
+  },
+  "additionalProperties": false
 }
