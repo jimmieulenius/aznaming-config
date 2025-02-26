@@ -30,7 +30,7 @@
           "type": "string"
         },
         "aliases": {
-          "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json"
+          "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
         },
         "restApi": {
           "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
