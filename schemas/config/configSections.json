@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/configSections.json",
+
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sectionsItem"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "sections"
+  ].
+
+  "$defs": {
+
+    "sectionsItem": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri"
+      ]
+    }
+
+  }
+}
