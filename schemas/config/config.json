@@ -2,43 +2,18 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/config.json",
 
-  "oneOf": [
-    
-    {
-      "type": "object",
-      "properties": {
-        "$schema": {
-          "type": "string"
-        },
-        "sections": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/sectionsItem"
-          }
-        }
-      },
-      "additionalProperties": false,
-      "required": [
-        "sections"
-      ]
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
     },
-
-    {
-      "type": "object",
-      "properties": {
-        "$schema": {
-          "type": "string"
-        },
-        "aliases": {
-          "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
-        },
-        "restApi": {
-          "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
-        }
-      }
+    "aliases": {
+      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
+    },
+    "restApi": {
+      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
     }
-
-  ],
+  }
 
   "$defs": {
 
