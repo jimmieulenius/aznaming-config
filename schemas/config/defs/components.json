@@ -5,42 +5,68 @@
   "type": "object",
   "patternProperties": {
     "^(?!\\$)": {
-      "oneOf": [    
-        {
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum" : [
-                "childDictionary",
-                "dictionary",
-                "instance",
-                "freeText",
-                "unique"
-              ]
-            },
-            "source": {
-              "type": "object",
-              "patternProperties": {
-                ".": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "required": [
-            "source"
-          ]
-        }
-      ],
-    
+
+      "type": "object",
       "properties": {
         "$id": {
           "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum" : [
+            "childDictionary",
+            "dictionary",
+            "instance",
+            "freeText",
+            "unique"
+          ]
         }
       },
+      
       "required": [
           "type"
       ]
+      
+      "allOf": [
+
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "dictionary"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "type": "object",
+                "patternProperties": {
+                  ".": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "required": [
+              "source"
+            ]
+          }
+        },
+
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "freeText"
+              }
+            }
+          },
+          "then": {}
+        }
+        
+      ],
+
     }
   }
 }
