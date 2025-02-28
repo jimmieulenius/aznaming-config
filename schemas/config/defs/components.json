@@ -27,7 +27,7 @@
           "type"
       ],
       
-      "anyOf": [
+      "allOf": [
 
         {
           "if": {
