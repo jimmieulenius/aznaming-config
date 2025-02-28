@@ -51,7 +51,8 @@
             "required": [
               "source"
             ]
-          }
+          },
+          "else": {}
         },
 
         {
