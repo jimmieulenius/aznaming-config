@@ -50,9 +50,9 @@
             },
             "required": [
               "source"
-            ]
-          },
-          "else": {}
+            ],
+            "additionalProperties": false
+          }
         },
 
         {
@@ -63,7 +63,9 @@
               }
             }
           },
-          "then": {}
+          "then": {
+            "additionalProperties": false
+          }
         },
 
         {
@@ -95,13 +97,12 @@
             },
             "required": [
               "maxValue"
-            ]
+            ],
+            "additionalProperties": false
           }
         }
         
-      ],
-
-      "additionalProperties": false
+      ]
 
     }
   }
