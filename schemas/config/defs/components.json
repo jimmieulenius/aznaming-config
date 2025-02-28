@@ -1,109 +1,40 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/components.json",
-
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "patternProperties": {
-    "^(?!\\$)": {
-
+    "^[^$]": {
       "type": "object",
       "properties": {
-        "$id": {
-          "type": "string"
-        },
         "type": {
           "type": "string",
-          "enum" : [
-            "childDictionary",
-            "dictionary",
-            "instance",
-            "freeText",
-            "unique"
-          ]
+          "enum": ["childDictionary", "dictionary", "freeText", "instance", "unique"]
         }
       },
-      
-      "required": [
-          "type"
-      ],
-      
-      "allOf": [
-
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "dictionary"
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "source": {
-                "type": "object",
-                "patternProperties": {
-                  ".": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "required": [
-              "source"
-            ],
-            "additionalProperties": false
-          }
-        },
-
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "freeText"
-              }
-            }
-          },
-          "then": {
-            "additionalProperties": false
-          }
-        },
-
-        {
-          "if": {
-            "properties": {
-              "type": {
-                "const": "instance"
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "maxValue": {
-                "type": "number"
+      "required": ["type"],
+      "dependentSchemas": {
+        "dictionary": {
+          "properties": {
+            "type": { "const": "dictionary" },
+            "source": {
+              "type": "object",
+              "patternProperties": {
+                ".": { "type": "string" }
               },
-              "padding": {
-                "type": "object",
-                "properties": {
-                  "totalLength": {
-                    "type": "number"
-                  },
-                  "character": {
-                    "type": "string",
-                    "minLength": 1,
-                    "maxLength": 1
-                  }
-                }
-              }
-            },
-            "required": [
-              "maxValue"
-            ],
-            "additionalProperties": false
-          }
+              "additionalProperties": false
+            }
+          },
+          "required": ["source"],
+          "additionalProperties": false
+        },
+        "childDictionary": {
+          "properties": {
+            "type": { "const": "freeText" }
+          },
+          "required": [],
+          "additionalProperties": false
         }
-        
-      ]
-
+      }
     }
-  }
+  },
+  "additionalProperties": false
 }
