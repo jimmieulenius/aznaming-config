@@ -11,29 +11,39 @@
         }
       },
       "required": ["type"],
-      "dependentSchemas": {
-        "dictionary": {
+      "oneOf": [
+        {
           "properties": {
-            "type": { "const": "dictionary" },
-            "source": {
-              "type": "object",
-              "patternProperties": {
-                ".": { "type": "string" }
-              },
-              "additionalProperties": false
-            }
+            "type": { "const": "dictionary" }
           },
-          "required": ["source"],
-          "additionalProperties": false
+          "required": ["type"],
+          "then": {
+            "properties": {
+              "source": {
+                "type": "object",
+                "patternProperties": {
+                  ".": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            },
+            "required": ["source"],
+            "additionalProperties": false
+          }
         },
-        "childDictionary": {
+        {
           "properties": {
-            "type": { "const": "freeText" }
+            "type": { "const": "childDictionary" }
           },
-          "required": [],
-          "additionalProperties": false
+          "required": ["type"],
+          "then": {
+            "properties": {
+            },
+            "required": [],
+            "additionalProperties": false
+          }
         }
-      }
+      ]
     }
   },
   "additionalProperties": false
