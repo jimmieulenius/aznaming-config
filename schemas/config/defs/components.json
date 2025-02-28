@@ -99,7 +99,9 @@
           }
         }
         
-      ]
+      ],
+
+      "additionalProperties": false
 
     }
   }
