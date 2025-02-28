@@ -63,6 +63,39 @@
             }
           },
           "then": {}
+        },
+
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "instance"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "maxValue": {
+                "type": "number"
+              },
+              "padding": {
+                "type": "object",
+                "properties": {
+                  "totalLength": {
+                    "type": "number"
+                  },
+                  "character": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1
+                  }
+                }
+              }
+            },
+            "required": [
+              "maxValue"
+            ]
+          }
         }
         
       ]
