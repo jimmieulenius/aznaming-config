@@ -1,6 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": ["$schema"],
   "patternProperties": {
     "^[^$]": {
       "type": "object",
@@ -11,39 +17,27 @@
         }
       },
       "required": ["type"],
-      "oneOf": [
-        {
+      "dependentSchemas": {
+        "dictionary": {
           "properties": {
-            "type": { "const": "dictionary" }
+            "source": {
+              "type": "object",
+              "patternProperties": {
+                ".": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
           },
-          "required": ["type"],
-          "then": {
-            "properties": {
-              "source": {
-                "type": "object",
-                "patternProperties": {
-                  ".": { "type": "string" }
-                },
-                "additionalProperties": false
-              }
-            },
-            "required": ["source"],
-            "additionalProperties": false
-          }
+          "required": ["source"],
+          "additionalProperties": false
         },
-        {
+        "freeText": {
           "properties": {
-            "type": { "const": "childDictionary" }
           },
-          "required": ["type"],
-          "then": {
-            "properties": {
-            },
-            "required": [],
-            "additionalProperties": false
-          }
+          "required": [],
+          "additionalProperties": false
         }
-      ]
+      }
     }
   },
   "additionalProperties": false
