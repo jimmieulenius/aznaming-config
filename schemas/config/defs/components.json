@@ -24,18 +24,15 @@
               "type": "object",
               "patternProperties": {
                 ".": { "type": "string" }
-              },
-              "additionalProperties": false
+              }
             }
           },
-          "required": ["source"],
-          "additionalProperties": false
+          "required": ["source"]
         },
         "freeText": {
           "properties": {
           },
-          "required": [],
-          "additionalProperties": false
+          "required": []
         }
       }
     }
