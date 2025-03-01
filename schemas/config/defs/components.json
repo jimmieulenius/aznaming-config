@@ -45,11 +45,7 @@
                 }
               }
             }
-          },
-          "required": [
-            "type",
-            "source"
-          ]
+          }
         },
         
         {
@@ -59,10 +55,7 @@
               [
                 "freeText"
               ]
-            },
-            "required": [
-              "type"
-            ]
+            }
           }
         }
         
