@@ -61,6 +61,33 @@
             }
           },
           "required": []
+        },
+
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "instance"
+              ]
+            },
+            "maxValue": {
+              "type": "number"
+            },
+            "padding": {
+              "type": "object",
+              "properties": {
+                "totalLength": {
+                  "type": "number"
+                },
+                "paddingCharacter": {
+                  "type": "string",
+                  "maxLength": 1,
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "required": []
         }
         
       ]
