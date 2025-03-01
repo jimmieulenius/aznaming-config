@@ -24,9 +24,16 @@
           ]
         }
       },
-      "required": [
-        "type"
-      ],
+      "if": {
+        "not: "{
+          "required": ["$ref"]
+        }
+      },
+      "then": {
+        "required": [
+          "type"
+        ]
+      },
       
       "oneOf": [
         
