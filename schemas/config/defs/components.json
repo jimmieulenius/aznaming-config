@@ -24,6 +24,9 @@
           ]
         }
       },
+      "required": [
+        "type"
+      ],
       
       "oneOf": [
         
