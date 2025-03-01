@@ -49,6 +49,9 @@
                 "dictionary"
               ]
             },
+            "$ref": {
+              "type": "string"
+            },
             "source": {
               "type": "object",
               "patternProperties": {
