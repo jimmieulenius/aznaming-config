@@ -58,9 +58,18 @@
               }
             }
           },
-          "required": [
-            "source"
-          ],
+          "if": {
+            "properties": {
+              "$ref": {
+                "not": {}
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "source"
+            ]
+          },
           "additionalProperties": false
         },
         
