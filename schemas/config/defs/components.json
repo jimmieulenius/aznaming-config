@@ -6,7 +6,9 @@
       "type": "string"
     }
   },
-  "required": ["$schema"],
+  "required": [
+    "$schema"
+  ],
   "patternProperties": {
     "^[^$]": {
       "type": "object",
@@ -17,24 +19,36 @@
         }
       },
       "required": ["type"],
-      "dependentSchemas": {
-        "dictionary": {
+      "oneOf": [
+        
+        {
           "properties": {
+            "type": {"enum": ["dictionary"]},
             "source": {
               "type": "object",
               "patternProperties": {
-                ".": { "type": "string" }
+                ".": {
+                  "type": "string"
+                }
               }
             }
           },
-          "required": ["source"]
+          "required": [
+            "type",
+            "source"
+          ]
         },
-        "freeText": {
+        
+        {
           "properties": {
-          },
-          "required": []
+            "type": {"enum": ["freeText"]},
+            "required": [
+              "type"
+            ]
+          }
         }
-      }
+        
+      ]
     }
   },
   "additionalProperties": false
