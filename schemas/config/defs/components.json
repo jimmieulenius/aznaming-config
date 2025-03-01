@@ -46,7 +46,9 @@
               }
             }
           },
-          "required": []
+          "required": [
+            "source"
+          ]
         },
         
         {
