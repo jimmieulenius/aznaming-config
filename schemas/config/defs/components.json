@@ -15,15 +15,25 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["childDictionary", "dictionary", "freeText", "instance", "unique"]
+          "enum": [
+            "childDictionary",
+            "dictionary",
+            "freeText",
+            "instance",
+            "unique"
+          ]
         }
       },
-      "required": ["type"],
+      
       "oneOf": [
         
         {
           "properties": {
-            "type": {"enum": ["dictionary"]},
+            "type": {
+              "enum": [
+                "dictionary"
+              ]
+            },
             "source": {
               "type": "object",
               "patternProperties": {
@@ -41,7 +51,12 @@
         
         {
           "properties": {
-            "type": {"enum": ["freeText"]},
+            "type": {
+              "enum":
+              [
+                "freeText"
+              ]
+            },
             "required": [
               "type"
             ]
