@@ -52,13 +52,19 @@
             "$ref": {
               "type": "string"
             },
-            "source": {
+            "properties": {
               "type": "object",
-              "patternProperties": {
-                ".": {
-                  "type": "string"
+              "properties": {
+                "source": {
+                  "type": "object",
+                  "patternProperties": {
+                    ".": {
+                      "type": "string"
+                    }
+                  }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "if": {
@@ -70,7 +76,8 @@
           },
           "then": {
             "required": [
-              "source"
+              "type",
+              "properties"
             ]
           },
           "additionalProperties": false
@@ -85,8 +92,14 @@
               ]
             }
           },
-          "required": [],
-          "additionalProperties": false
+          "$ref": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
         },
 
         {
@@ -96,24 +109,42 @@
                 "instance"
               ]
             },
-            "maxValue": {
-              "type": "number"
-            },
-            "padding": {
+            "properties": {
               "type": "object",
               "properties": {
-                "totalLength": {
+                "maxValue": {
                   "type": "number"
                 },
-                "paddingCharacter": {
-                  "type": "string",
-                  "maxLength": 1,
-                  "minLength": 1
+                "padding": {
+                  "type": "object",
+                  "properties": {
+                    "totalLength": {
+                      "type": "number"
+                    },
+                    "paddingCharacter": {
+                      "type": "string",
+                      "maxLength": 1,
+                      "minLength": 1
+                    }
+                  }
                 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "if": {
+            "properties": {
+              "$ref": {
+                "not": {}
               }
             }
           },
-          "required": [],
+          "then": {
+            "required": [
+              "type",
+              "properties"
+            ]
+          },
           "additionalProperties": false
         }
         
