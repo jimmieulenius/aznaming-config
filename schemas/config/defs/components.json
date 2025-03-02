@@ -36,7 +36,8 @@
       },
       "then": {
         "required": [
-          "type"
+          "type",
+          "properties2"
         ]
       },
       
@@ -52,7 +53,7 @@
             "$ref": {
               "type": "string"
             },
-            "properties": {
+            "properties2222": {
               "type": "object",
               "properties": {
                 "source": {
@@ -77,7 +78,7 @@
           "then": {
             "required": [
               "type",
-              "properties"
+              "properties2"
             ]
           },
           "additionalProperties": false
