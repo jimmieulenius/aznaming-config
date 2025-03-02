@@ -25,6 +25,9 @@
             "instance",
             "unique"
           ]
+        },
+        "properties": {
+          "type": "object"
         }
       },
       "if": {
@@ -53,7 +56,7 @@
             "$ref": {
               "type": "string"
             },
-            "properties2222": {
+            "properties2": {
               "type": "object",
               "properties": {
                 "source": {
