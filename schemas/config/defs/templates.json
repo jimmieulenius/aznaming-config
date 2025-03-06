@@ -38,7 +38,16 @@
         "values": {
           "type": "object",
           "patternProperties": {
-            "^(?!\\$)": {}
+            "^(?!\\$)": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
           }
         },
         "validText": {
