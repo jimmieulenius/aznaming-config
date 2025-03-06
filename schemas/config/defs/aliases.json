@@ -4,6 +4,9 @@
 
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "components": {
       "$ref": "#/$defs/aliasesObject"
     },
@@ -11,6 +14,7 @@
       "$ref": "#/$defs/aliasesObject"
     }
   },
+  "additionalProperties": false,
 
   "$defs": {
 

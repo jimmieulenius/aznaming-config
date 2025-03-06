@@ -8,9 +8,6 @@
       "type": "string"
     }
   },
-  "required": [
-    "$schema"
-  ],
   "patternProperties": {
     "^[^$]": {
       "type": "object",
