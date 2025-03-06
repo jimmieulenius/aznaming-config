@@ -50,6 +50,55 @@
           "properties": {
             "type": {
               "enum": [
+                "childDictionary"
+              ]
+            },
+            "$ref": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "parent": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "object",
+                  "patternProperties": {
+                    ".": {
+                      "type": "object",
+                        "patternProperties": {
+                          ".": {
+                            "type": "string"
+                          }
+                        }
+                    }
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "if": {
+            "properties": {
+              "$ref": {
+                "not": {}
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "properties"
+            ]
+          },
+          "additionalProperties": false
+        },
+
+        {
+          "properties": {
+            "type": {
+              "enum": [
                 "dictionary"
               ]
             },
@@ -116,6 +165,9 @@
             "properties": {
               "type": "object",
               "properties": {
+                "minValue": {
+                  "type": "number"
+                },
                 "maxValue": {
                   "type": "number"
                 },
@@ -150,8 +202,43 @@
             ]
           },
           "additionalProperties": false
+        },
+
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "unique"
+              ]
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "length": {
+                  "type": "number"
+                },
+                "seed": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "if": {
+            "properties": {
+              "$ref": {
+                "not": {}
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "properties"
+            ]
+          },
+          "additionalProperties": false
         }
-        
       ]
     }
   },
