@@ -21,6 +21,9 @@
         "properties": {
           "type": "object",
           "properties": {
+            "$ref": {
+              "type": "string"
+            },
             "name": {
               "type": "string"
             },
@@ -86,24 +89,45 @@
               "type": "string"
             }
           },
-          "required": [
-            "name",
-            "shortName",
-            "template",
-            "lengthMax",
-            "lengthMin",
-            "casing",
-            "validText",
-            "invalidText",
-            "invalidCharacters",
-            "invalidCharactersStart",
-            "invalidCharactersEnd",
-            "invalidCharactersConsecutive",
-            "regex",
-            "staticValue"
-          ],
+          "if": {
+            "properties": {
+              "$ref": {
+                "not": {}
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "name",
+              "shortName",
+              "template",
+              "lengthMax",
+              "lengthMin",
+              "casing",
+              "validText",
+              "invalidText",
+              "invalidCharacters",
+              "invalidCharactersStart",
+              "invalidCharactersEnd",
+              "invalidCharactersConsecutive",
+              "regex",
+              "staticValue"
+            ]
+          },
           "additionalProperties": false
         }
+      },
+      "if": {
+        "properties": {
+          "$ref": {
+            "not": {}
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "properties"
+        ]
       }
     }
   },
