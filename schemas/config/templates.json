@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/templates.json",
+  
+    "allOf": [    
+      {
+        "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/templates.json"
+      }
+    ],
+  
+    "properties": {
+      "$schema": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+  
+    "required": ["$schema"]
+  }
+  

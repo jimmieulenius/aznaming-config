@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/templates.json",
+
+  "type": "object",
+  "patternProperties": {
+    "^(?!\\$)": {
+      "type": "object",
+      "properties": {
+        "$id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "template": {
+          "type": "string"
+        },
+        "lengthMax": {
+          "type": "number",
+          "minimum": 1
+        },
+        "lengthMin": {
+          "type": "number",
+          "minimum": 1
+        },
+        "casing": {
+          "type": "string",
+          "enum": [
+            "lower",
+            "upper",
+            "none"
+          ]
+        },
+        "values": {
+          "type": "object",
+          "patternProperties": {
+            "^(?!\\$)": {}
+          }
+        },
+        "validText": {
+          "type": "string"
+        },
+        "invalidText": {
+          "type": "string"
+        },
+        "invalidCharacters": {
+          "type": "string"
+        },
+        "invalidCharactersStart": {
+          "type": "string"
+        },
+        "invalidCharactersEnd": {
+          "type": "string"
+        },
+        "invalidCharactersConsecutive": {
+          "type": "string"
+        },
+        "regex": {
+          "type": "string"
+        },
+        "staticValue": {
+          "type": "string"
+        }
+      },
+      "required": [
+          "apiVersion",
+          "requests"
+      ]
+    }
+  }
+}
