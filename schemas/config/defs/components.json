@@ -169,10 +169,12 @@
               "type": "object",
               "properties": {
                 "minValue": {
-                  "type": "number"
+                  "type": "number",
+                  "minimum": 0
                 },
                 "maxValue": {
-                  "type": "number"
+                  "type": "number",
+                  "minimum": 0
                 },
                 "padding": {
                   "type": "object",
@@ -221,7 +223,9 @@
               "type": "object",
               "properties": {
                 "length": {
-                  "type": "number"
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 32
                 },
                 "seed": {
                   "type": "string"
