@@ -10,27 +10,14 @@
     "aliases": {
       "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
     },
+    "components": {
+      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/components.json"
+    },
     "restApi": {
       "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
+    },
+    "templates": {
+      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/templates.json"
     }
-  }
-
-  "$defs": {
-
-    "sectionsItem": {
-      "type": "object",
-      "properties": {
-        "uri": {
-          "type": "string"
-        },
-        "path": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "uri"
-      ]
-    }
-
   }
 }

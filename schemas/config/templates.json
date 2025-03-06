@@ -12,6 +12,9 @@
       "$schema": {
         "type": "string",
         "format": "uri"
+      },
+      "$id": {
+        "type": "string"
       }
     },
   

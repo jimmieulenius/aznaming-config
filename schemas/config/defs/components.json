@@ -15,6 +15,9 @@
     "^[^$]": {
       "type": "object",
       "properties": {
+        "$id": {
+          "type": "string"
+        },
         "$ref": {
           "type": "string"
         },

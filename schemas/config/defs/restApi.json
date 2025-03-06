@@ -7,34 +7,42 @@
     "^(?!\\$)": {
       "type": "object",
       "properties": {
-        "apiVersion": {
-          "type": "string"
-        },
-        "requests": {
+        "properties": {
           "type": "object",
-          "patternProperties": {
-            ".": {
+          "properties": {
+            "apiVersion": {
+              "type": "string"
+            },
+            "requests": {
               "type": "object",
-              "properties": {
-                "uri": {
-                  "type": "string",
-                  "format": "uri"
-                },
-                "body": {
+              "patternProperties": {
+                ".": {
                   "type": "object",
-                  "additionalProperties": true
+                  "properties": {
+                    "uri": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "body": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "required": [
+                      "uri"
+                  ]
                 }
-              },
-              "required": [
-                  "uri"
-              ]
+              }
             }
-          }
+          },
+          "required": [
+            "apiVersion",
+            "requests"
+          ]
         }
       },
       "required": [
-          "apiVersion",
-          "requests"
+        "properties"
       ]
     }
   }

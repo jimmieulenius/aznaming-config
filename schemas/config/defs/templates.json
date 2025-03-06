@@ -10,75 +10,97 @@
         "$id": {
           "type": "string"
         },
-        "name": {
+        "$ref": {
           "type": "string"
         },
-        "shortName": {
-          "type": "string"
-        },
-        "template": {
-          "type": "string"
-        },
-        "lengthMax": {
-          "type": "number",
-          "minimum": 1
-        },
-        "lengthMin": {
-          "type": "number",
-          "minimum": 1
-        },
-        "casing": {
-          "type": "string",
-          "enum": [
-            "lower",
-            "upper",
-            "none"
-          ]
-        },
-        "values": {
+        "properties": {
           "type": "object",
-          "patternProperties": {
-            "^(?!\\$)": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "number"
-                }
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "template": {
+              "type": "string"
+            },
+            "lengthMax": {
+              "type": "number",
+              "minimum": 1
+            },
+            "lengthMin": {
+              "type": "number",
+              "minimum": 1
+            },
+            "casing": {
+              "type": "string",
+              "enum": [
+                "lower",
+                "upper",
+                "none"
               ]
+            },
+            "values": {
+              "type": "object",
+              "patternProperties": {
+                "^(?!\\$)": {
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
+            },
+            "validText": {
+              "type": "string"
+            },
+            "invalidText": {
+              "type": "string"
+            },
+            "invalidCharacters": {
+              "type": "string"
+            },
+            "invalidCharactersStart": {
+              "type": "string"
+            },
+            "invalidCharactersEnd": {
+              "type": "string"
+            },
+            "invalidCharactersConsecutive": {
+              "type": "string"
+            },
+            "regex": {
+              "type": "string"
+            },
+            "staticValue": {
+              "type": "string"
             }
-          }
-        },
-        "validText": {
-          "type": "string"
-        },
-        "invalidText": {
-          "type": "string"
-        },
-        "invalidCharacters": {
-          "type": "string"
-        },
-        "invalidCharactersStart": {
-          "type": "string"
-        },
-        "invalidCharactersEnd": {
-          "type": "string"
-        },
-        "invalidCharactersConsecutive": {
-          "type": "string"
-        },
-        "regex": {
-          "type": "string"
-        },
-        "staticValue": {
-          "type": "string"
+          },
+          "required": [
+            "name",
+            "shortName",
+            "template",
+            "lengthMax",
+            "lengthMin",
+            "casing",
+            "validText",
+            "invalidText",
+            "invalidCharacters",
+            "invalidCharactersStart",
+            "invalidCharactersEnd",
+            "invalidCharactersConsecutive",
+            "regex",
+            "staticValue"
+          ],
+          "additionalProperties": false
         }
-      },
-      "required": [
-          "apiVersion",
-          "requests"
-      ]
+      }
     }
-  }
+  },
+  "additionalProperties": false
 }
