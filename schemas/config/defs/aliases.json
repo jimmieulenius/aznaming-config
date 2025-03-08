@@ -4,7 +4,7 @@
 
   "type": "object",
   "properties": {
-    "$schema": {
+    "$ref": {
       "type": "string"
     },
     "components": {
