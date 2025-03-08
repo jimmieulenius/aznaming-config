@@ -55,6 +55,9 @@
                 "childDictionary"
               ]
             },
+            "$id": {
+              "type": "string"
+            },
             "$ref": {
               "type": "string"
             },
@@ -104,6 +107,9 @@
                 "dictionary"
               ]
             },
+            "$id": {
+              "type": "string"
+            },
             "$ref": {
               "type": "string"
             },
@@ -146,6 +152,9 @@
                 "freeText"
               ]
             },
+            "$id": {
+              "type": "string"
+            },
             "$ref": {
               "type": "string"
             },
@@ -163,6 +172,9 @@
               "enum": [
                 "instance"
               ]
+            },
+            "$id": {
+              "type": "string"
             },
             "$ref": {
               "type": "string"
@@ -217,6 +229,9 @@
               "enum": [
                 "unique"
               ]
+            },
+            "$id": {
+              "type": "string"
             },
             "$ref": {
               "type": "string"
