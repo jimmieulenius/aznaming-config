@@ -43,246 +43,245 @@
         "required": [
           "type",
           "properties"
-        ]
-      },
-      
-      "oneOf": [
-        
-        {
-          "properties": {
-            "type": {
-              "enum": [
-                "childDictionary"
-              ]
-            },
-            "$id": {
-              "type": "string"
-            },
-            "$ref": {
-              "type": "string"
-            },
+        ],
+        "oneOf": [
+          
+          {
             "properties": {
-              "type": "object",
+              "type": {
+                "enum": [
+                  "childDictionary"
+                ]
+              },
+              "$id": {
+                "type": "string"
+              },
+              "$ref": {
+                "type": "string"
+              },
               "properties": {
-                "$ref": {
-                  "type": "string"
-                },
-                "parent": {
-                  "type": "string"
-                },
-                "source": {
-                  "type": "object",
-                  "patternProperties": {
-                    ".": {
-                      "type": "object",
-                        "patternProperties": {
-                          ".": {
-                            "type": "string"
+                "type": "object",
+                "properties": {
+                  "$ref": {
+                    "type": "string"
+                  },
+                  "parent": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "object",
+                    "patternProperties": {
+                      ".": {
+                        "type": "object",
+                          "patternProperties": {
+                            ".": {
+                              "type": "string"
+                            }
                           }
-                        }
+                      }
                     }
                   }
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "if": {
-            "properties": {
-              "$ref": {
-                "not": {}
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "type",
-              "properties"
-            ]
-          },
-          "additionalProperties": false
-        },
-
-        {
-          "properties": {
-            "type": {
-              "enum": [
-                "dictionary"
-              ]
-            },
-            "$id": {
-              "type": "string"
-            },
-            "$ref": {
-              "type": "string"
-            },
-            "properties": {
-              "type": "object",
-              "properties": {
-                "$ref": {
-                  "type": "string"
                 },
-                "source": {
-                  "type": "object",
-                  "patternProperties": {
-                    ".": {
-                      "type": "string"
+                "additionalProperties": false
+              }
+            },
+            "if": {
+              "properties": {
+                "$ref": {
+                  "not": {}
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "type",
+                "properties"
+              ]
+            },
+            "additionalProperties": false
+          },
+
+          {
+            "properties": {
+              "type": {
+                "enum": [
+                  "dictionary"
+                ]
+              },
+              "$id": {
+                "type": "string"
+              },
+              "$ref": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "$ref": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "object",
+                    "patternProperties": {
+                      ".": {
+                        "type": "string"
+                      }
                     }
                   }
+                },
+                "additionalProperties": false
+              }
+            },
+            "if": {
+              "properties": {
+                "$ref": {
+                  "not": {}
                 }
-              },
-              "additionalProperties": false
-            }
+              }
+            },
+            "then": {
+              "required": [
+                "type",
+                "properties"
+              ]
+            },
+            "additionalProperties": false
           },
-          "if": {
+          
+          {
             "properties": {
+              "type": {
+                "enum":
+                [
+                  "freeText"
+                ]
+              },
+              "$id": {
+                "type": "string"
+              },
               "$ref": {
-                "not": {}
+                "type": "string"
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "$ref": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
               }
             }
           },
-          "then": {
-            "required": [
-              "type",
-              "properties"
-            ]
-          },
-          "additionalProperties": false
-        },
-        
-        {
-          "properties": {
-            "type": {
-              "enum":
-              [
-                "freeText"
-              ]
-            },
-            "$id": {
-              "type": "string"
-            },
-            "$ref": {
-              "type": "string"
-            },
+
+          {
             "properties": {
-              "type": "object",
+              "type": {
+                "enum": [
+                  "instance"
+                ]
+              },
+              "$id": {
+                "type": "string"
+              },
+              "$ref": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "$ref": {
+                    "type": "string"
+                  },
+                  "minValue": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "maxValue": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "padding": {
+                    "type": "object",
+                    "properties": {
+                      "totalLength": {
+                        "type": "number"
+                      },
+                      "paddingCharacter": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "if": {
               "properties": {
                 "$ref": {
-                  "type": "string"
+                  "not": {}
                 }
+              }
+            },
+            "then": {
+              "required": [
+                "type",
+                "properties"
+              ]
+            },
+            "additionalProperties": false
+          },
+
+          {
+            "properties": {
+              "type": {
+                "enum": [
+                  "unique"
+                ]
               },
-              "additionalProperties": false
-            }
+              "$id": {
+                "type": "string"
+              },
+              "$ref": {
+                "type": "string"
+              },
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "$ref": {
+                    "type": "string"
+                  },
+                  "length": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 32
+                  },
+                  "seed": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "if": {
+              "properties": {
+                "$ref": {
+                  "not": {}
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "type",
+                "properties"
+              ]
+            },
+            "additionalProperties": false
           }
-        },
-
-        {
-          "properties": {
-            "type": {
-              "enum": [
-                "instance"
-              ]
-            },
-            "$id": {
-              "type": "string"
-            },
-            "$ref": {
-              "type": "string"
-            },
-            "properties": {
-              "type": "object",
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                },
-                "minValue": {
-                  "type": "number",
-                  "minimum": 0
-                },
-                "maxValue": {
-                  "type": "number",
-                  "minimum": 0
-                },
-                "padding": {
-                  "type": "object",
-                  "properties": {
-                    "totalLength": {
-                      "type": "number"
-                    },
-                    "paddingCharacter": {
-                      "type": "string",
-                      "maxLength": 1,
-                      "minLength": 1
-                    }
-                  }
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "if": {
-            "properties": {
-              "$ref": {
-                "not": {}
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "type",
-              "properties"
-            ]
-          },
-          "additionalProperties": false
-        },
-
-        {
-          "properties": {
-            "type": {
-              "enum": [
-                "unique"
-              ]
-            },
-            "$id": {
-              "type": "string"
-            },
-            "$ref": {
-              "type": "string"
-            },
-            "properties": {
-              "type": "object",
-              "properties": {
-                "$ref": {
-                  "type": "string"
-                },
-                "length": {
-                  "type": "number",
-                  "minimum": 1,
-                  "maximum": 32
-                },
-                "seed": {
-                  "type": "string"
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "if": {
-            "properties": {
-              "$ref": {
-                "not": {}
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "type",
-              "properties"
-            ]
-          },
-          "additionalProperties": false
-        }
-      ]
+        ]
+      }
     }
   },
   "additionalProperties": false
