@@ -64,6 +64,9 @@
             "properties": {
               "type": "object",
               "properties": {
+                "$ref": {
+                  "type": "string"
+                },
                 "parent": {
                   "type": "string"
                 },
@@ -116,6 +119,9 @@
             "properties": {
               "type": "object",
               "properties": {
+                "$ref": {
+                  "type": "string"
+                },
                 "source": {
                   "type": "object",
                   "patternProperties": {
@@ -160,7 +166,11 @@
             },
             "properties": {
               "type": "object",
-              "properties": {},
+              "properties": {
+                "$ref": {
+                  "type": "string"
+                }
+              },
               "additionalProperties": false
             }
           }
@@ -182,6 +192,9 @@
             "properties": {
               "type": "object",
               "properties": {
+                "$ref": {
+                  "type": "string"
+                },
                 "minValue": {
                   "type": "number",
                   "minimum": 0
@@ -239,6 +252,9 @@
             "properties": {
               "type": "object",
               "properties": {
+                "$ref": {
+                  "type": "string"
+                },
                 "length": {
                   "type": "number",
                   "minimum": 1,
