@@ -8,16 +8,16 @@
       "type": "string"
     },
     "aliases": {
-      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
+      "$ref": "/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/defs/aliases.json"
     },
     "components": {
-      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/components.json"
+      "$ref": "/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/defs/components.json"
     },
     "restApi": {
-      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/restApi.json"
+      "$ref": "/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/defs/restApi.json"
     },
     "templates": {
-      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/templates.json"
+      "$ref": "/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/defs/templates.json"
     }
   }
 }
