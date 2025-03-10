@@ -1,10 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming/refs/heads/main/schemas/config/aliases.json",
+  "$id": "https://raw.githubusercontent.com/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/aliases.json",
 
   "allOf": [    
     {
-      "$ref": "/jimmieulenius/aznaming/refs/heads/main/schemas/config/defs/aliases.json"
+      "$ref": "/jimmieulenius/aznaming-config/refs/heads/main/schemas/config/defs/aliases.json"
     }
   ],
 
