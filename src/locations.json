@@ -1,0 +1,170 @@
+{
+  "AustraliaCentral": {
+    "abbreviation": "auc"
+  },
+  "AustraliaCentral2": {
+    "abbreviation": "auc2"
+  },
+  "AustraliaEast": {
+    "abbreviation": "aue"
+  },
+  "AustraliaSoutheast": {
+    "abbreviation": "ause"
+  },
+  "BrazilSouth": {
+    "abbreviation": "bs"
+  },
+  "BrazilSoutheast": {
+    "abbreviation": "bse"
+  },
+  "BrazilUS": {
+    "abbreviation": "bus"
+  },
+  "CanadaCentral": {
+    "abbreviation": "cnc"
+  },
+  "CanadaEast": {
+    "abbreviation": "cne"
+  },
+  "CentralIndia": {
+    "abbreviation": "inc"
+  },
+  "CentralUS": {
+    "abbreviation": "usc"
+  },
+  "CentralUSEUAP": {
+    "abbreviation": "usce"
+  },
+  "EastAsia": {
+    "abbreviation": "ase"
+  },
+  "EastUS": {
+    "abbreviation": "use"
+  },
+  "EastUS2": {
+    "abbreviation": "use2"
+  },
+  "EastUSEUAP": {
+    "abbreviation": "usee"
+  },
+  "EastUSSTG": {
+    "abbreviation": "uses"
+  },
+  "FranceCentral": {
+    "abbreviation": "frc"
+  },
+  "FranceSouth": {
+    "abbreviation": "frs"
+  },
+  "GermanyNorth": {
+    "abbreviation": "gn"
+  },
+  "GermanyWestCentral": {
+    "abbreviation": "gwc"
+  },
+  "IsraelCentral": {
+    "abbreviation": "isc"
+  },
+  "ItalyNorth": {
+    "abbreviation": "itn"
+  },
+  "JapanEast": {
+    "abbreviation": "jpe"
+  },
+  "JapanWest": {
+    "abbreviation": "jpw"
+  },
+  "JioIndiaCentral": {
+    "abbreviation": "jic"
+  },
+  "JioIndiawWst": {
+    "abbreviation": "jiw"
+  },
+  "KoreaCentral": {
+    "abbreviation": "krc"
+  },
+  "KoreaSouth": {
+    "abbreviation": "krs"
+  },
+  "MexicoCentral": {
+    "abbreviation": "mxc"
+  },
+  "NewZealandNorth": {
+    "abbreviation": "nzn"
+  },
+  "NorthCentralUS": {
+    "abbreviation": "usnc"
+  },
+  "NorthEurope": {
+    "abbreviation": "eun"
+  },
+  "NorwayEast": {
+    "abbreviation": "nwe"
+  },
+  "NorwayWest": {
+    "abbreviation": "nww"
+  },
+  "PolandCentral": {
+    "abbreviation": "plc"
+  },
+  "QatarCentral": {
+    "abbreviation": "qac"
+  },
+  "SouthAfricaNorth": {
+    "abbreviation": "san"
+  },
+  "SouthAfricaWest": {
+    "abbreviation": "saw"
+  },
+  "SouthCentralUS": {
+    "abbreviation": "ussc"
+  },
+  "SouthCentralUSSTG": {
+    "abbreviation": "usscstg"
+  },
+  "SoutheastAsia": {
+    "abbreviation": "asse"
+  },
+  "SouthIndia": {
+    "abbreviation": "ins"
+  },
+  "SpainCentral": {
+    "abbreviation": "spc"
+  },
+  "SwedenCentral": {
+    "abbreviation": "sdc"
+  },
+  "SwitzerlandNorth": {
+    "abbreviation": "szn"
+  },
+  "UAECentral": {
+    "abbreviation": "uac"
+  },
+  "UAENorth": {
+    "abbreviation": "uan"
+  },
+  "UKSouth": {
+    "abbreviation": "uks"
+  },
+  "UKWest": {
+    "abbreviation": "ukw"
+  },
+  "WestCentralUS": {
+    "abbreviation": "uscw"
+  },
+  "WestEurope": {
+    "abbreviation": "euw"
+  },
+  "WestIndia": {
+    "abbreviation": "inw"
+  },
+  "WestUS": {
+    "abbreviation": "usw"
+  },
+  "WestUS2": {
+    "abbreviation": "usw2"
+  },
+  "WestUS3": {
+    "abbreviation": "usw3"
+  }
+}

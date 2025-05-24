@@ -1,0 +1,1803 @@
+{
+  "$id": "default.restApis",
+  "ApiManagement/service": {
+    "$id": "default.restapis.apimanagement/service",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis": {
+    "$id": "default.restapis.apimanagement/service/apis",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/issues": {
+    "$id": "default.restapis.apimanagement/service/apis/issues",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/issues",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/issues/attachments": {
+    "$id": "default.restapis.apimanagement/service/apis/issues/attachments",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/issues/attachments",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/issues/comments": {
+    "$id": "default.restapis.apimanagement/service/apis/issues/comments",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/issues/comments",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/operations": {
+    "$id": "default.restapis.apimanagement/service/apis/operations",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/operations",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/operations/tags": {
+    "$id": "default.restapis.apimanagement/service/apis/operations/tags",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/operations/tags",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/releases": {
+    "$id": "default.restapis.apimanagement/service/apis/releases",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/releases",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/schemas": {
+    "$id": "default.restapis.apimanagement/service/apis/schemas",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/schemas",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/tagDescriptions": {
+    "$id": "default.restapis.apimanagement/service/apis/tagdescriptions",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/tagDescriptions",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/apis/tags": {
+    "$id": "default.restapis.apimanagement/service/apis/tags",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/apis/tags",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/api-version-sets": {
+    "$id": "default.restapis.apimanagement/service/api-version-sets",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/api-version-sets",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/authorizationServers": {
+    "$id": "default.restapis.apimanagement/service/authorizationservers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/authorizationServers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/backends": {
+    "$id": "default.restapis.apimanagement/service/backends",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/backends",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/certificates": {
+    "$id": "default.restapis.apimanagement/service/certificates",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/certificates",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/diagnostics": {
+    "$id": "default.restapis.apimanagement/service/diagnostics",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/diagnostics",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/groups": {
+    "$id": "default.restapis.apimanagement/service/groups",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/groups",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/groups/users": {
+    "$id": "default.restapis.apimanagement/service/groups/users",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/groups/users",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/identityProviders": {
+    "$id": "default.restapis.apimanagement/service/identityproviders",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/identityProviders",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/loggers": {
+    "$id": "default.restapis.apimanagement/service/loggers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/loggers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/notifications": {
+    "$id": "default.restapis.apimanagement/service/notifications",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/notifications",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/notifications/recipientEmails": {
+    "$id": "default.restapis.apimanagement/service/notifications/recipientemails",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/notifications/recipientEmails",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/openidConnectProviders": {
+    "$id": "default.restapis.apimanagement/service/openidconnectproviders",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/openidConnectProviders",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/policies": {
+    "$id": "default.restapis.apimanagement/service/policies",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/policies",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/products": {
+    "$id": "default.restapis.apimanagement/service/products",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/products",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/products/apis": {
+    "$id": "default.restapis.apimanagement/service/products/apis",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/products/groups": {
+    "$id": "default.restapis.apimanagement/service/products/groups",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/products/groups",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/products/tags": {
+    "$id": "default.restapis.apimanagement/service/products/tags",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/products/tags",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/properties": {
+    "$id": "default.restapis.apimanagement/service/properties",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/properties",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/subscriptions": {
+    "$id": "default.restapis.apimanagement/service/subscriptions",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/subscriptions",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/tags": {
+    "$id": "default.restapis.apimanagement/service/tags",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/tags",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/templates": {
+    "$id": "default.restapis.apimanagement/service/templates",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/templates",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "ApiManagement/service/users": {
+    "$id": "default.restapis.apimanagement/service/users",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07",
+          "Body": {
+            "type": "Microsoft.ApiManagement/service/users",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+        }
+      }
+    }
+  },
+  "AppConfiguration/configurationStores": {
+    "$id": "default.restapis.appconfiguration/configurationstores",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.AppConfiguration/checkNameAvailability?api-version=2019-02-01-preview",
+          "ApiVersion": "2019-02-01-preview",
+          "Body": {
+            "type": "Microsoft.AppConfiguration/configurationStores",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.AppConfiguration/{2}?api-version=2019-02-01-preview"
+        }
+      }
+    }
+  },
+  "Cache/Redis": {
+    "$id": "default.restapis.cache/redis",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Cache/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.Cache/Redis",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cache/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "Cdn/profiles/endpoints": {
+    "$id": "default.restapis.cdn/profiles/endpoints",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Cdn/checkNameAvailability?api-version=2015-06-01",
+          "ApiVersion": "2015-06-01",
+          "Body": {
+            "type": "Microsoft.Cdn/profiles/endpoints",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cdn/{2}?api-version=2015-06-01"
+        }
+      }
+    }
+  },
+  "ContainerRegistry/registries": {
+    "$id": "default.restapis.containerregistry/registries",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ContainerRegistry/checkNameAvailability?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01",
+          "Body": {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ContainerRegistry/{2}?api-version=2017-03-01"
+        }
+      }
+    }
+  },
+  "DataFactory/factories": {
+    "$id": "default.restapis.datafactory/factories",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/dataflows": {
+    "$id": "default.restapis.datafactory/factories/dataflows",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/dataflows",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2018-06-01"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/datasets": {
+    "$id": "default.restapis.datafactory/factories/datasets",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/integrationRuntimes": {
+    "$id": "default.restapis.datafactory/factories/integrationruntimes",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/integrationRuntimes",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/linkedservices": {
+    "$id": "default.restapis.datafactory/factories/linkedservices",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/linkedservices",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/pipelines": {
+    "$id": "default.restapis.datafactory/factories/pipelines",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DataFactory/factories/triggers": {
+    "$id": "default.restapis.datafactory/factories/triggers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DataFactory/factories/triggers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+        }
+      }
+    }
+  },
+  "DBforMariaDB/servers": {
+    "$id": "default.restapis.dbformariadb/servers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DBforMariaDB/servers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+        }
+      }
+    }
+  },
+  "DBforMariaDB/servers/databases": {
+    "$id": "default.restapis.dbformariadb/servers/databases",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DBforMariaDB/servers/databases",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+        }
+      }
+    }
+  },
+  "DBforMariaDB/servers/firewallRules": {
+    "$id": "default.restapis.dbformariadb/servers/firewallrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DBforMariaDB/servers/firewallRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+        }
+      }
+    }
+  },
+  "DBforMariaDB/servers/virtualNetworkRules": {
+    "$id": "default.restapis.dbformariadb/servers/virtualnetworkrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01",
+          "Body": {
+            "type": "Microsoft.DBforMariaDB/servers/virtualNetworkRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+        }
+      }
+    }
+  },
+  "DBforMySQL/servers": {
+    "$id": "default.restapis.dbformysql/servers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforMySQL/servers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforMySQL/servers/databases": {
+    "$id": "default.restapis.dbformysql/servers/databases",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforMySQL/servers/databases",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforMySQL/servers/firewallRules": {
+    "$id": "default.restapis.dbformysql/servers/firewallrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforMySQL/servers/firewallRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforMySQL/servers/virtualNetworkRules": {
+    "$id": "default.restapis.dbformysql/servers/virtualnetworkrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforMySQL/servers/virtualNetworkRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforPostgreSQL/servers": {
+    "$id": "default.restapis.dbforpostgresql/servers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforPostgreSQL/servers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforPostgreSQL/servers/databases": {
+    "$id": "default.restapis.dbforpostgresql/servers/databases",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforPostgreSQL/servers/databases",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforPostgreSQL/servers/firewallRules": {
+    "$id": "default.restapis.dbforpostgresql/servers/firewallrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforPostgreSQL/servers/firewallRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "DBforPostgreSQL/servers/virtualNetworkRules": {
+    "$id": "default.restapis.dbforpostgresql/servers/virtualnetworkrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01",
+          "Body": {
+            "type": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+        }
+      }
+    }
+  },
+  "EventHub/clusters": {
+    "$id": "default.restapis.eventhub/clusters",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2018-01-01-preview",
+          "ApiVersion": "2018-01-01-preview",
+          "Body": {
+            "type": "Microsoft.EventHub/clusters",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2018-01-01-preview"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces": {
+    "$id": "default.restapis.eventhub/namespaces",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces/AuthorizationRules": {
+    "$id": "default.restapis.eventhub/namespaces/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces/AuthorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces/disasterRecoveryConfigs": {
+    "$id": "default.restapis.eventhub/namespaces/disasterrecoveryconfigs",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2017-04-01",
+          "ApiVersion": "2017-04-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2017-04-01"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces/eventhubs": {
+    "$id": "default.restapis.eventhub/namespaces/eventhubs",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces/eventhubs",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces/eventhubs/authorizationRules": {
+    "$id": "default.restapis.eventhub/namespaces/eventhubs/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "EventHub/namespaces/eventhubs/consumergroups": {
+    "$id": "default.restapis.eventhub/namespaces/eventhubs/consumergroups",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.EventHub/namespaces/eventhubs/consumergroups",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "IoTCentral/IoTApps": {
+    "$id": "default.restapis.iotcentral/iotapps",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.IoTCentral/checkNameAvailability?api-version=2018-09-01",
+          "ApiVersion": "2018-09-01",
+          "Body": {
+            "type": "Microsoft.IoTCentral/IoTApps",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.IoTCentral/{2}?api-version=2018-09-01"
+        }
+      }
+    }
+  },
+  "KeyVault/vaults": {
+    "$id": "default.restapis.keyvault/vaults",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.KeyVault/checkNameAvailability?api-version=2015-06-01",
+          "ApiVersion": "2015-06-01",
+          "Body": {
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.KeyVault/{2}?api-version=2015-06-01"
+        }
+      }
+    }
+  },
+  "LoadTestService/loadtests": {
+    "$id": "default.restapis.loadtestservice/loadtests",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.LoadTestService/checkNameAvailability?api-version=2022-12-01",
+          "ApiVersion": "2022-12-01",
+          "Body": {
+            "type": "Microsoft.LoadTestService/loadtests",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.LoadTestService/{2}?api-version=2021-12-01-preview"
+        }
+      }
+    }
+  },
+  "NotificationHubs/namespaces": {
+    "$id": "default.restapis.notificationhubs/namespaces",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.NotificationHubs/namespaces",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "NotificationHubs/namespaces/AuthorizationRules": {
+    "$id": "default.restapis.notificationhubs/namespaces/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "NotificationHubs/namespaces/notificationHubs": {
+    "$id": "default.restapis.notificationhubs/namespaces/notificationhubs",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "NotificationHubs/namespaces/notificationHubs/AuthorizationRules": {
+    "$id": "default.restapis.notificationhubs/namespaces/notificationhubs/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01",
+          "Body": {
+            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces": {
+    "$id": "default.restapis.relay/namespaces",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces/AuthorizationRules": {
+    "$id": "default.restapis.relay/namespaces/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces/AuthorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces/HybridConnections": {
+    "$id": "default.restapis.relay/namespaces/hybridconnections",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces/HybridConnections",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces/HybridConnections/authorizationRules": {
+    "$id": "default.restapis.relay/namespaces/hybridconnections/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces/HybridConnections/authorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces/WcfRelays": {
+    "$id": "default.restapis.relay/namespaces/wcfrelays",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces/WcfRelays",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "Relay/namespaces/WcfRelays/authorizationRules": {
+    "$id": "default.restapis.relay/namespaces/wcfrelays/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01",
+          "Body": {
+            "type": "Microsoft.Relay/namespaces/WcfRelays/authorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces": {
+    "$id": "default.restapis.servicebus/namespaces",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/AuthorizationRules": {
+    "$id": "default.restapis.servicebus/namespaces/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/disasterRecoveryConfigs": {
+    "$id": "default.restapis.servicebus/namespaces/disasterrecoveryconfigs",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2017-04-01",
+          "ApiVersion": "2017-04-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2017-04-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/migrationConfigurations": {
+    "$id": "default.restapis.servicebus/namespaces/migrationconfigurations",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2017-04-01",
+          "ApiVersion": "2017-04-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/migrationConfigurations",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2017-04-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/queues": {
+    "$id": "default.restapis.servicebus/namespaces/queues",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/queues",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/queues/authorizationRules": {
+    "$id": "default.restapis.servicebus/namespaces/queues/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/queues/authorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/topics": {
+    "$id": "default.restapis.servicebus/namespaces/topics",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/topics",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/topics/authorizationRules": {
+    "$id": "default.restapis.servicebus/namespaces/topics/authorizationrules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/topics/subscriptions": {
+    "$id": "default.restapis.servicebus/namespaces/topics/subscriptions",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "ServiceBus/namespaces/topics/subscriptions/rules": {
+    "$id": "default.restapis.servicebus/namespaces/topics/subscriptions/rules",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ServiceBus/checkNameAvailability?api-version=2017-04-01",
+          "ApiVersion": "2017-04-01",
+          "Body": {
+            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions/rules",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2017-04-01"
+        }
+      }
+    }
+  },
+  "Sql/servers": {
+    "$id": "default.restapis.sql/servers",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Sql/checkNameAvailability?api-version=2014-04-01",
+          "ApiVersion": "2014-04-01",
+          "Body": {
+            "type": "Microsoft.Sql/servers",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Sql/{2}?api-version=2014-04-01"
+        }
+      }
+    }
+  },
+  "Storage/storageAccounts": {
+    "$id": "default.restapis.storage/storageaccounts",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Storage/checkNameAvailability?api-version=2015-05-01-preview",
+          "ApiVersion": "2015-05-01-preview",
+          "Body": {
+            "type": "Microsoft.Storage/storageAccounts",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Storage/{2}?api-version=2015-05-01-preview"
+        }
+      }
+    }
+  },
+  "Web/sites": {
+    "$id": "default.restapis.web/sites",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Web/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.Web/sites",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  },
+  "Web/sites/slots": {
+    "$id": "default.restapis.web/sites/slots",
+    "properties": {
+      "requests": {
+        "checkNameAvailability": {
+          "Method": "POST",
+          "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Web/checkNameAvailability?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01",
+          "Body": {
+            "type": "Microsoft.Web/sites/slots",
+            "name": "{NAME}"
+          }
+        },
+        "exist": {
+          "Method": "GET",
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01"
+        }
+      }
+    }
+  }
+}
