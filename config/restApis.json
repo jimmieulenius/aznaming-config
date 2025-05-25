@@ -9,13 +9,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -29,13 +30,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -49,13 +51,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/issues",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/issues"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -69,13 +72,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/issues/attachments",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/issues/attachments"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -89,13 +93,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/issues/comments",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/issues/comments"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -109,13 +114,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/operations",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/operations"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -129,13 +135,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/operations/tags",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/operations/tags"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -149,13 +156,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/releases",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/releases"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -169,13 +177,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/schemas",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/schemas"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -189,13 +198,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/tagDescriptions",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/tagDescriptions"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -209,13 +219,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/apis/tags",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/apis/tags"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -229,13 +240,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/api-version-sets",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/api-version-sets"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -249,13 +261,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/authorizationServers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/authorizationServers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -269,13 +282,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/backends",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/backends"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -289,13 +303,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/certificates",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/certificates"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -309,13 +324,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/diagnostics",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/diagnostics"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -329,13 +345,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/groups",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/groups"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -349,13 +366,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/groups/users",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/groups/users"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -369,13 +387,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/identityProviders",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/identityProviders"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -389,13 +408,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/loggers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/loggers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -409,13 +429,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/notifications",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/notifications"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -429,13 +450,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/notifications/recipientEmails",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/notifications/recipientEmails"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -449,13 +471,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/openidConnectProviders",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/openidConnectProviders"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -469,13 +492,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/policies",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/policies"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -489,13 +513,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/products",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/products"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -509,13 +534,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/products/apis",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/products/apis"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -529,13 +555,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/products/groups",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/products/groups"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -549,13 +576,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/products/tags",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/products/tags"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -569,13 +597,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/properties",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/properties"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -589,13 +618,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/subscriptions",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/subscriptions"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -609,13 +639,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/tags",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/tags"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -629,13 +660,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/templates",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/templates"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -649,13 +681,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ApiManagement/checkNameAvailability?api-version=2016-07-07",
           "ApiVersion": "2016-07-07",
           "Body": {
-            "type": "Microsoft.ApiManagement/service/users",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ApiManagement/service/users"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ApiManagement/{2}?api-version=2016-07-07",
+          "ApiVersion": "2016-07-07"
         }
       }
     }
@@ -669,13 +702,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.AppConfiguration/checkNameAvailability?api-version=2019-02-01-preview",
           "ApiVersion": "2019-02-01-preview",
           "Body": {
-            "type": "Microsoft.AppConfiguration/configurationStores",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.AppConfiguration/configurationStores"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.AppConfiguration/{2}?api-version=2019-02-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.AppConfiguration/{2}?api-version=2019-02-01-preview",
+          "ApiVersion": "2019-02-01-preview"
         }
       }
     }
@@ -689,13 +723,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Cache/checkNameAvailability?api-version=2015-08-01",
           "ApiVersion": "2015-08-01",
           "Body": {
-            "type": "Microsoft.Cache/Redis",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Cache/Redis"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cache/{2}?api-version=2015-08-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cache/{2}?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01"
         }
       }
     }
@@ -709,13 +744,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Cdn/checkNameAvailability?api-version=2015-06-01",
           "ApiVersion": "2015-06-01",
           "Body": {
-            "type": "Microsoft.Cdn/profiles/endpoints",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Cdn/profiles/endpoints"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cdn/{2}?api-version=2015-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Cdn/{2}?api-version=2015-06-01",
+          "ApiVersion": "2015-06-01"
         }
       }
     }
@@ -729,13 +765,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.ContainerRegistry/checkNameAvailability?api-version=2017-03-01",
           "ApiVersion": "2017-03-01",
           "Body": {
-            "type": "Microsoft.ContainerRegistry/registries",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.ContainerRegistry/registries"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ContainerRegistry/{2}?api-version=2017-03-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ContainerRegistry/{2}?api-version=2017-03-01",
+          "ApiVersion": "2017-03-01"
         }
       }
     }
@@ -749,13 +786,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -769,13 +807,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/dataflows",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/dataflows"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2018-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01"
         }
       }
     }
@@ -789,13 +828,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/datasets",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/datasets"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -809,13 +849,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/integrationRuntimes",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/integrationRuntimes"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -829,13 +870,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/linkedservices",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/linkedservices"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -849,13 +891,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/pipelines",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/pipelines"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -869,13 +912,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DataFactory/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DataFactory/factories/triggers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DataFactory/factories/triggers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DataFactory/{2}?api-version=2017-09-01-preview",
+          "ApiVersion": "2017-09-01-preview"
         }
       }
     }
@@ -889,13 +933,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DBforMariaDB/servers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMariaDB/servers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01"
         }
       }
     }
@@ -909,13 +954,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DBforMariaDB/servers/databases",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMariaDB/servers/databases"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01"
         }
       }
     }
@@ -929,13 +975,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DBforMariaDB/servers/firewallRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMariaDB/servers/firewallRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01"
         }
       }
     }
@@ -949,13 +996,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMariaDB/checkNameAvailability?api-version=2018-06-01",
           "ApiVersion": "2018-06-01",
           "Body": {
-            "type": "Microsoft.DBforMariaDB/servers/virtualNetworkRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMariaDB/servers/virtualNetworkRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMariaDB/{2}?api-version=2018-06-01",
+          "ApiVersion": "2018-06-01"
         }
       }
     }
@@ -969,13 +1017,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforMySQL/servers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMySQL/servers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -989,13 +1038,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforMySQL/servers/databases",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMySQL/servers/databases"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1009,13 +1059,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforMySQL/servers/firewallRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMySQL/servers/firewallRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1029,13 +1080,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforMySQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforMySQL/servers/virtualNetworkRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforMySQL/servers/virtualNetworkRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforMySQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1049,13 +1101,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforPostgreSQL/servers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforPostgreSQL/servers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1069,13 +1122,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforPostgreSQL/servers/databases",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforPostgreSQL/servers/databases"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1089,13 +1143,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforPostgreSQL/servers/firewallRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforPostgreSQL/servers/firewallRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1109,13 +1164,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.DBforPostgreSQL/checkNameAvailability?api-version=2017-12-01",
           "ApiVersion": "2017-12-01",
           "Body": {
-            "type": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.DBforPostgreSQL/{2}?api-version=2017-12-01",
+          "ApiVersion": "2017-12-01"
         }
       }
     }
@@ -1129,13 +1185,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2018-01-01-preview",
           "ApiVersion": "2018-01-01-preview",
           "Body": {
-            "type": "Microsoft.EventHub/clusters",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/clusters"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2018-01-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2018-01-01-preview",
+          "ApiVersion": "2018-01-01-preview"
         }
       }
     }
@@ -1149,13 +1206,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1169,13 +1227,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces/AuthorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces/AuthorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1189,13 +1248,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2017-04-01",
           "ApiVersion": "2017-04-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2017-04-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2017-04-01",
+          "ApiVersion": "2017-04-01"
         }
       }
     }
@@ -1209,13 +1269,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces/eventhubs",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces/eventhubs"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1229,13 +1290,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1249,13 +1311,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.EventHub/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.EventHub/namespaces/eventhubs/consumergroups",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.EventHub/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1269,13 +1332,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.IoTCentral/checkNameAvailability?api-version=2018-09-01",
           "ApiVersion": "2018-09-01",
           "Body": {
-            "type": "Microsoft.IoTCentral/IoTApps",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.IoTCentral/IoTApps"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.IoTCentral/{2}?api-version=2018-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.IoTCentral/{2}?api-version=2018-09-01",
+          "ApiVersion": "2018-09-01"
         }
       }
     }
@@ -1289,13 +1353,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.KeyVault/checkNameAvailability?api-version=2015-06-01",
           "ApiVersion": "2015-06-01",
           "Body": {
-            "type": "Microsoft.KeyVault/vaults",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.KeyVault/vaults"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.KeyVault/{2}?api-version=2015-06-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.KeyVault/{2}?api-version=2015-06-01",
+          "ApiVersion": "2015-06-01"
         }
       }
     }
@@ -1309,13 +1374,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.LoadTestService/checkNameAvailability?api-version=2022-12-01",
           "ApiVersion": "2022-12-01",
           "Body": {
-            "type": "Microsoft.LoadTestService/loadtests",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.LoadTestService/loadtests"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.LoadTestService/{2}?api-version=2021-12-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.LoadTestService/{2}?api-version=2021-12-01-preview",
+          "ApiVersion": "2021-12-01-preview"
         }
       }
     }
@@ -1329,13 +1395,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.NotificationHubs/namespaces",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.NotificationHubs/namespaces"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1349,13 +1416,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.NotificationHubs/namespaces/AuthorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.NotificationHubs/namespaces/AuthorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1369,13 +1437,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1389,13 +1458,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.NotificationHubs/checkNameAvailability?api-version=2014-09-01",
           "ApiVersion": "2014-09-01",
           "Body": {
-            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.NotificationHubs/namespaces/notificationHubs/AuthorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.NotificationHubs/{2}?api-version=2014-09-01",
+          "ApiVersion": "2014-09-01"
         }
       }
     }
@@ -1409,13 +1479,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1429,13 +1500,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces/AuthorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces/AuthorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1449,13 +1521,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces/HybridConnections",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces/HybridConnections"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1469,13 +1542,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces/HybridConnections/authorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces/HybridConnections/authorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1489,13 +1563,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces/WcfRelays",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces/WcfRelays"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1509,13 +1584,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Relay/checkNameAvailability?api-version=2016-07-01",
           "ApiVersion": "2016-07-01",
           "Body": {
-            "type": "Microsoft.Relay/namespaces/WcfRelays/authorizationRules",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Relay/namespaces/WcfRelays/authorizationRules"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Relay/{2}?api-version=2016-07-01",
+          "ApiVersion": "2016-07-01"
         }
       }
     }
@@ -1534,7 +1610,8 @@
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.ServiceBus/{2}?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01"
         }
       }
     }
@@ -1548,13 +1625,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Sql/checkNameAvailability?api-version=2014-04-01",
           "ApiVersion": "2014-04-01",
           "Body": {
-            "type": "Microsoft.Sql/servers",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Sql/servers"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Sql/{2}?api-version=2014-04-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Sql/{2}?api-version=2014-04-01",
+          "ApiVersion": "2014-04-01"
         }
       }
     }
@@ -1568,13 +1646,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Storage/checkNameAvailability?api-version=2015-05-01-preview",
           "ApiVersion": "2015-05-01-preview",
           "Body": {
-            "type": "Microsoft.Storage/storageAccounts",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Storage/storageAccounts"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Storage/{2}?api-version=2015-05-01-preview"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Storage/{2}?api-version=2015-05-01-preview",
+          "ApiVersion": "2015-05-01-preview"
         }
       }
     }
@@ -1588,13 +1667,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Web/checkNameAvailability?api-version=2015-08-01",
           "ApiVersion": "2015-08-01",
           "Body": {
-            "type": "Microsoft.Web/sites",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Web/sites"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01"
         }
       }
     }
@@ -1608,13 +1688,14 @@
           "Uri": "https://management.azure.com/subscriptions/{0}/providers/Microsoft.Web/checkNameAvailability?api-version=2015-08-01",
           "ApiVersion": "2015-08-01",
           "Body": {
-            "type": "Microsoft.Web/sites/slots",
-            "name": "{NAME}"
+            "name": "{NAME}",
+            "type": "Microsoft.Web/sites/slots"
           }
         },
         "exist": {
           "Method": "GET",
-          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01"
+          "Uri": "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/Microsoft.Web/{2}?api-version=2015-08-01",
+          "ApiVersion": "2015-08-01"
         }
       }
     }

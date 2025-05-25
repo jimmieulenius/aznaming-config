@@ -269,9 +269,6 @@ $count = @(0, 0)
 
 $baseId = 'default.restapis'
 
-# $resourceTypeList = [System.Collections.Generic.List[String]]::new()
-# $allResourceTypeList = [System.Collections.Generic.List[String]]::new()
-
 try {
     Get-WebResponse `
         -Uri $Script:AzureUri.ResourceNameRule `
@@ -432,6 +429,7 @@ try {
                                             exist = [Ordered]@{
                                                 Method = 'GET'
                                                 Uri = "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/$($providerNamespaceItem.Provider)/{2}?api-version=$($providerNamespaceItem.ApiVersion[0])"
+                                                ApiVersion = $providerNamespaceItem.ApiVersion[0]
                                             }
                                         }
                                     }
