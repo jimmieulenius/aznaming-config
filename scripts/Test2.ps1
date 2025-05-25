@@ -20,11 +20,13 @@ function Initialize-Object {
                 -PathType 'Leaf'
         )
     ) {
-        return Get-Content `
-            -Path $Path `
-            -Raw `
-        | ConvertFrom-Json `
-            -AsHashtable
+        return (
+            Get-Content `
+                -Path $Path `
+                -Raw `
+            | ConvertFrom-Json `
+                -AsHashtable
+        ) ?? [Ordered]@{}
     }
     
     return [Ordered]@{}
@@ -195,52 +197,52 @@ function Get-CheckNameAvailabilityRequest {
     }
 }
 
-function Invoke-Retry {
-    param (
-        [Parameter(
-            Mandatory = $true,
-            ValueFromPipeline = $true
-        )]
-        [ScriptBlock]
-        $InputObject,
+# function Invoke-Retry {
+#     param (
+#         [Parameter(
+#             Mandatory = $true,
+#             ValueFromPipeline = $true
+#         )]
+#         [ScriptBlock]
+#         $InputObject,
 
-        [Int]
-        $RetryCount = 3,
+#         [Int]
+#         $RetryCount = 3,
 
-        [Int]
-        $Delay = 1000
-    )
+#         [Int]
+#         $Delay = 1000
+#     )
 
-    for ($retryIndex = 0; $retryIndex -lt $RetryCount; $retryIndex++) {
-        $shouldProcess = $false
-        $errorOutput = $null
+#     for ($retryIndex = 0; $retryIndex -lt $RetryCount; $retryIndex++) {
+#         $shouldProcess = $false
+#         $errorOutput = $null
 
-        try {
-            $errorOutput = (
-                $result = & $InputObject
-            ) 2>&1
+#         try {
+#             $errorOutput = (
+#                 $result = & $InputObject
+#             ) 2>&1
 
-            if ($errorOutput.Exception) {
-                $shouldProcess = $true
-            }
-        }
-        catch {
-            $errorOutput = $_
-            $shouldProcess = $true
-        }
+#             if ($errorOutput.Exception) {
+#                 $shouldProcess = $true
+#             }
+#         }
+#         catch {
+#             $errorOutput = $_
+#             $shouldProcess = $true
+#         }
 
-        if (-not $shouldProcess) {
-            return $result
-        }
+#         if (-not $shouldProcess) {
+#             return $result
+#         }
 
-        if ($retryIndex -eq ($RetryCount - 1)) {
-            throw $errorOutput
-        }
+#         if ($retryIndex -eq ($RetryCount - 1)) {
+#             throw $errorOutput
+#         }
 
-        Start-Sleep `
-            -Milliseconds $Delay
-    }
-}
+#         Start-Sleep `
+#             -Milliseconds $Delay
+#     }
+# }
 
 New-Item `
     -Path $Destination `
@@ -366,11 +368,60 @@ try {
                         $providerNamespaceItem = $providerNamespace.$namespaceItem
 
                         if ($providerNamespaceItem) {
-                            $checkNameRequest = Get-CheckNameAvailabilityRequest `
-                                -SubscriptionId $subscriptionId `
-                                -Provider $providerNamespaceItem.Provider `
-                                -ApiVersion $providerNamespaceItem.ApiVersion `
-                                -ResourceType "Microsoft.$namespaceItem"
+                            # $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                            #     -SubscriptionId $subscriptionId `
+                            #     -Provider $providerNamespaceItem.Provider `
+                            #     -ApiVersion $providerNamespaceItem.ApiVersion `
+                            #     -ResourceType "Microsoft.$namespaceItem"
+
+                            switch ($namespaceItem) {
+                                ('Management/managementGroups') {
+                                    $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                        -Provider $providerNamespaceItem.Provider `
+                                        -ApiVersion $providerNamespaceItem.ApiVersion `
+                                        -ResourceType "Microsoft.$namespaceItem"
+                                }
+                                ('Media/mediaservices') {
+                                    $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                        -SubscriptionId $subscriptionId `
+                                        -Provider $providerNamespaceItem.Provider `
+                                        -ApiVersion $providerNamespaceItem.ApiVersion `
+                                        -ResourceType 'mediaServices'
+                                }
+                                ('Search/searchServices') {
+                                    $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                        -SubscriptionId $subscriptionId `
+                                        -Provider $providerNamespaceItem.Provider `
+                                        -ApiVersion $providerNamespaceItem.ApiVersion `
+                                        -ResourceType 'searchServices'
+                                }
+                                { $_.StartsWith('ServiceBus') } {
+                                    $checkNameRequest = (
+                                        ($_ -ieq 'ServiceBus/namespaces') `
+                                        ? (
+                                            Get-CheckNameAvailabilityRequest `
+                                                -SubscriptionId $subscriptionId `
+                                                -Provider $providerNamespaceItem.Provider `
+                                                -ApiVersion $providerNamespaceItem.ApiVersion `
+                                                -ResourceType "Microsoft.$namespaceItem"
+                                        ) `
+                                        : $null
+                                    )
+
+                                    $body = $checkNameRequest.Body
+
+                                    if ($body) {
+                                        $body.Remove('type')
+                                    }
+                                }
+                                default {
+                                    $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                        -SubscriptionId $subscriptionId `
+                                        -Provider $providerNamespaceItem.Provider `
+                                        -ApiVersion $providerNamespaceItem.ApiVersion `
+                                        -ResourceType "Microsoft.$namespaceItem"
+                                }
+                            }
 
                             if ($checkNameRequest) {
                                 $content.$namespaceItem = [Ordered]@{
