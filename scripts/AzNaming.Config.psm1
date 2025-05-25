@@ -1,13 +1,7 @@
-# Add-Type `
-#     -Path @(
-#         "$PSScriptRoot/Azure.Identity.dll",
-#         "$PSScriptRoot/Azure.Core.dll",
-#         "$PSScriptRoot/Microsoft.Identity.Client.dll"
-#     )
-
 $Script:AzureUri = @{
     RegionList = 'https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/refs/heads/main/articles/reliability/regions-list.md'
     ResourceNameRule = 'https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/refs/heads/main/articles/azure-resource-manager/management/resource-name-rules.md'
+    ResourceType = 'https://raw.githubusercontent.com/Azure/bicep-types-az/a1f912858bde4b99de09da237394f87d9ecaac48/generated/index.md'
 }
 
 function Initialize-Object {
@@ -227,245 +221,245 @@ function Build-Config {
     #     -Destination $configBasePath
 }
 
-function Build-RestApiConfig {
-    param (
-        [Parameter(Mandatory = $true)]
-        [String]
-        $Destination,
+# function Build-RestApiConfig {
+#     param (
+#         [Parameter(Mandatory = $true)]
+#         [String]
+#         $Destination,
 
-        [String]
-        $ConfigDirectory = "$PSScriptRoot/../../../../config"
-    )
+#         [String]
+#         $ConfigDirectory = "$PSScriptRoot/../../../../config"
+#     )
 
-    function Get-Request {
-        param (
-            [Parameter(
-                Mandatory = $true,
-                ValueFromPipeline = $true
-            )]
-            [String]
-            $InputObject,
+#     function Get-Request {
+#         param (
+#             [Parameter(
+#                 Mandatory = $true,
+#                 ValueFromPipeline = $true
+#             )]
+#             [String]
+#             $InputObject,
 
-            [String]
-            $SubscriptionId,
+#             [String]
+#             $SubscriptionId,
 
-            [Parameter(Mandatory = $true)]
-            [String[]]
-            $ApiVersion,
+#             [Parameter(Mandatory = $true)]
+#             [String[]]
+#             $ApiVersion,
 
-            [Parameter(Mandatory = $true)]
-            [String]
-            $ResourceType
-        )
+#             [Parameter(Mandatory = $true)]
+#             [String]
+#             $ResourceType
+#         )
 
-        if (-not $SubscriptionId) {
-            $SubscriptionId = (Get-AzContext).Subscription.Id
-        }
+#         if (-not $SubscriptionId) {
+#             $SubscriptionId = (Get-AzContext).Subscription.Id
+#         }
 
-        $ResourceType = $ResourceType.Split('::')[0]
+#         $ResourceType = $ResourceType.Split('::')[0]
 
-        $body = @{
-            name = 'aaaaa'
-            type = $ResourceType
-        }
+#         $body = @{
+#             name = 'aaaaa'
+#             type = $ResourceType
+#         }
 
-        foreach ($apiVersionItem in $ApiVersion) {
-            $uri = $InputObject -f $SubscriptionId, $apiVersionItem
+#         foreach ($apiVersionItem in $ApiVersion) {
+#             $uri = $InputObject -f $SubscriptionId, $apiVersionItem
 
-            $response = $httpClient.PostAsync(
-                $uri,
-                [System.Net.Http.StringContent]::new(
-                    (
-                        $body `
-                        | ConvertTo-Json `
-                            -Compress
-                    ),
-                    [System.Text.Encoding]::UTF8, 'application/json'
-                )
-            ).
-            GetAwaiter(). `
-            GetResult()
+#             $response = $httpClient.PostAsync(
+#                 $uri,
+#                 [System.Net.Http.StringContent]::new(
+#                     (
+#                         $body `
+#                         | ConvertTo-Json `
+#                             -Compress
+#                     ),
+#                     [System.Text.Encoding]::UTF8, 'application/json'
+#                 )
+#             ).
+#             GetAwaiter(). `
+#             GetResult()
 
-            if ($response.IsSuccessStatusCode) {
-                if ($response.Content) {
-                    $content = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult() `
-                    | ConvertFrom-Json `
-                        -AsHashtable
+#             if ($response.IsSuccessStatusCode) {
+#                 if ($response.Content) {
+#                     $content = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult() `
+#                     | ConvertFrom-Json `
+#                         -AsHashtable
 
-                    if ($content) {
-                        if ($content.reason -ieq 'Invalid') {
-                            Write-Host $content.message
+#                     if ($content) {
+#                         if ($content.reason -ieq 'Invalid') {
+#                             Write-Host $content.message
 
-                            return
-                        }
-                    }
-                }
+#                             return
+#                         }
+#                     }
+#                 }
 
-                [Hashtable] $body = $body
-                $body.name = '{NAME}'
+#                 [Hashtable] $body = $body
+#                 $body.name = '{NAME}'
 
-                return @{
-                    Uri = $InputObject -f '{0}', $apiVersionItem
-                    ApiVersion = $apiVersionItem
-                    Body = $body
-                }
-            }
-        }
+#                 return @{
+#                     Uri = $InputObject -f '{0}', $apiVersionItem
+#                     ApiVersion = $apiVersionItem
+#                     Body = $body
+#                 }
+#             }
+#         }
 
-        if ($response.StatusCode -ine 'NotFound') {
-            Write-Host "$($ResourceType): $($response.StatusCode)"
+#         if ($response.StatusCode -ine 'NotFound') {
+#             Write-Host "$($ResourceType): $($response.StatusCode)"
 
-            if ($response.Content) {
-                Write-Host ($response.Content.ReadAsStringAsync().Result)
-            }
-        }
-    }
+#             if ($response.Content) {
+#                 Write-Host ($response.Content.ReadAsStringAsync().Result)
+#             }
+#         }
+#     }
 
-    $action = 'checkNameAvailability'
-    $provider = @{}
+#     $action = 'checkNameAvailability'
+#     $provider = @{}
 
-    $httpClient = [System.Net.Http.HttpClient]::new()
-    $httpClient.DefaultRequestHeaders.Accept.Add([System.Net.Http.Headers.MediaTypeWithQualityHeaderValue]::new("application/json"))
-    $httpClient.DefaultRequestHeaders.Authorization = [System.Net.Http.Headers.AuthenticationHeaderValue]::new(
-        "Bearer",
-        [Azure.Identity.DefaultAzureCredential]::new().GetToken([Azure.Core.TokenRequestContext]::new(@("https://management.azure.com/.default"))).Token
-    )
+#     $httpClient = [System.Net.Http.HttpClient]::new()
+#     $httpClient.DefaultRequestHeaders.Accept.Add([System.Net.Http.Headers.MediaTypeWithQualityHeaderValue]::new("application/json"))
+#     $httpClient.DefaultRequestHeaders.Authorization = [System.Net.Http.Headers.AuthenticationHeaderValue]::new(
+#         "Bearer",
+#         [Azure.Identity.DefaultAzureCredential]::new().GetToken([Azure.Core.TokenRequestContext]::new(@("https://management.azure.com/.default"))).Token
+#     )
 
-    Get-AzResourceProvider `
-    | Where-Object { $_.ResourceTypes.ResourceTypeName -ieq $action } `
-    | ForEach-Object {
-        $provider.($_.ProviderNamespace) = @{
-            ApiVersion = $_.ResourceTypes.ApiVersions `
-                | Select-Object `
-                    -Unique `
-                | Sort-Object `
-                    -Descending
-        }
-    }
+#     Get-AzResourceProvider `
+#     | Where-Object { $_.ResourceTypes.ResourceTypeName -ieq $action } `
+#     | ForEach-Object {
+#         $provider.($_.ProviderNamespace) = @{
+#             ApiVersion = $_.ResourceTypes.ApiVersions `
+#                 | Select-Object `
+#                     -Unique `
+#                 | Sort-Object `
+#                     -Descending
+#         }
+#     }
 
-    $baseId = 'default.restApis'
-    $content = [Ordered]@{
-        '$id' = $baseId
-    }
-    $subscriptionId = (Get-AzContext).Subscription.Id
+#     $baseId = 'default.restApis'
+#     $content = [Ordered]@{
+#         '$id' = $baseId
+#     }
+#     $subscriptionId = (Get-AzContext).Subscription.Id
 
-    (
-        Get-Content `
-            -Path "$ConfigDirectory/resourceTypes.json" `
-            -Raw `
-        | ConvertFrom-Json `
-            -AsHashtable
-    ).GetEnumerator() `
-    | ForEach-Object {
-        $providerNamespace = $_.Value.namespace.Split('/')[0]
-        $providerItem = $provider[$providerNamespace]
+#     (
+#         Get-Content `
+#             -Path "$ConfigDirectory/resourceTypes.json" `
+#             -Raw `
+#         | ConvertFrom-Json `
+#             -AsHashtable
+#     ).GetEnumerator() `
+#     | ForEach-Object {
+#         $providerNamespace = $_.Value.namespace.Split('/')[0]
+#         $providerItem = $provider[$providerNamespace]
 
-        if ($providerItem) {
-            $checkNameBaseUri = "https://management.azure.com/subscriptions/{0}/providers/"
-            $namespace = $_.Value.namespace
+#         if ($providerItem) {
+#             $checkNameBaseUri = "https://management.azure.com/subscriptions/{0}/providers/"
+#             $namespace = $_.Value.namespace
 
-            switch ($_.Key) {
-                ('Management/managementGroups') {
-                    $checkNameRequest = "https://management.azure.com/providers/$($providerNamespace)/$($action)?api-version={1}" `
-                    | Get-Request `
-                        -SubscriptionId $subscriptionId `
-                        -ApiVersion $providerItem.ApiVersion `
-                        -ResourceType $namespace
-                }
-                ('Media/mediaservices') {
-                    $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
-                    | Get-Request `
-                        -SubscriptionId $subscriptionId `
-                        -ApiVersion $providerItem.ApiVersion `
-                        -ResourceType 'mediaServices'
-                }
-                ('Search/searchServices') {
-                    $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
-                    | Get-Request `
-                        -SubscriptionId $subscriptionId `
-                        -ApiVersion $providerItem.ApiVersion `
-                        -ResourceType 'searchServices'
-                }
-                { $_.StartsWith('ServiceBus') } {
-                    $checkNameRequest = (
-                        ($_ -ieq 'ServiceBus/namespaces') `
-                        ? (
-                            "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
-                            | Get-Request `
-                                -SubscriptionId $subscriptionId `
-                                -ApiVersion $providerItem.ApiVersion `
-                                -ResourceType $namespace
-                        ) `
-                        : $null
-                    )
+#             switch ($_.Key) {
+#                 ('Management/managementGroups') {
+#                     $checkNameRequest = "https://management.azure.com/providers/$($providerNamespace)/$($action)?api-version={1}" `
+#                     | Get-Request `
+#                         -SubscriptionId $subscriptionId `
+#                         -ApiVersion $providerItem.ApiVersion `
+#                         -ResourceType $namespace
+#                 }
+#                 ('Media/mediaservices') {
+#                     $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
+#                     | Get-Request `
+#                         -SubscriptionId $subscriptionId `
+#                         -ApiVersion $providerItem.ApiVersion `
+#                         -ResourceType 'mediaServices'
+#                 }
+#                 ('Search/searchServices') {
+#                     $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
+#                     | Get-Request `
+#                         -SubscriptionId $subscriptionId `
+#                         -ApiVersion $providerItem.ApiVersion `
+#                         -ResourceType 'searchServices'
+#                 }
+#                 { $_.StartsWith('ServiceBus') } {
+#                     $checkNameRequest = (
+#                         ($_ -ieq 'ServiceBus/namespaces') `
+#                         ? (
+#                             "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
+#                             | Get-Request `
+#                                 -SubscriptionId $subscriptionId `
+#                                 -ApiVersion $providerItem.ApiVersion `
+#                                 -ResourceType $namespace
+#                         ) `
+#                         : $null
+#                     )
 
-                    $body = $checkNameRequest.Body
+#                     $body = $checkNameRequest.Body
 
-                    if ($body) {
-                        $body.Remove('type')
-                    }
-                }
-                default {
-                    $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
-                    | Get-Request `
-                        -SubscriptionId $subscriptionId `
-                        -ApiVersion $providerItem.ApiVersion `
-                        -ResourceType $namespace
-                }
-            }
+#                     if ($body) {
+#                         $body.Remove('type')
+#                     }
+#                 }
+#                 default {
+#                     $checkNameRequest = "$($checkNameBaseUri)$($providerNamespace)/$($action)?api-version={1}" `
+#                     | Get-Request `
+#                         -SubscriptionId $subscriptionId `
+#                         -ApiVersion $providerItem.ApiVersion `
+#                         -ResourceType $namespace
+#                 }
+#             }
 
-            if ($checkNameRequest) {
-                $content.($_.Key) = [Ordered]@{
-                    '$id' = "$baseId.$($_.Key)".ToLower()
-                    properties = [Ordered]@{
-                        apiVersion = $checkNameRequest.ApiVersion
-                        requests = [Ordered]@{
-                            checkName = [Ordered]@{
-                                uri = $checkNameRequest.Uri
-                                body = $checkNameRequest.Body
-                            }
-                            exist = [Ordered]@{
-                                uri = "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/$($_.Value.namespace)/{2}?api-version=$($checkNameRequest.ApiVersion)"
-                            }
-                        }
-                    }
-                }
-            }
-            else {
-                Write-Host $providerNamespace
-                Write-Host $namespace
-                Write-Host '---'
-            }
-        }
-    }
+#             if ($checkNameRequest) {
+#                 $content.($_.Key) = [Ordered]@{
+#                     '$id' = "$baseId.$($_.Key)".ToLower()
+#                     properties = [Ordered]@{
+#                         apiVersion = $checkNameRequest.ApiVersion
+#                         requests = [Ordered]@{
+#                             checkName = [Ordered]@{
+#                                 uri = $checkNameRequest.Uri
+#                                 body = $checkNameRequest.Body
+#                             }
+#                             exist = [Ordered]@{
+#                                 uri = "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/$($_.Value.namespace)/{2}?api-version=$($checkNameRequest.ApiVersion)"
+#                             }
+#                         }
+#                     }
+#                 }
+#             }
+#             else {
+#                 Write-Host $providerNamespace
+#                 Write-Host $namespace
+#                 Write-Host '---'
+#             }
+#         }
+#     }
 
-    New-Item `
-        -Path $Destination `
-        -ItemType 'Directory' `
-        -ErrorAction 'SilentlyContinue' `
-    | Out-Null
+#     New-Item `
+#         -Path $Destination `
+#         -ItemType 'Directory' `
+#         -ErrorAction 'SilentlyContinue' `
+#     | Out-Null
 
-    $destinationPath = "$Destination/restApis.json"
+#     $destinationPath = "$Destination/restApis.json"
 
-    Remove-Item `
-        -Path $destinationPath `
-        -ErrorAction 'SilentlyContinue' `
-        -Force
+#     Remove-Item `
+#         -Path $destinationPath `
+#         -ErrorAction 'SilentlyContinue' `
+#         -Force
 
-    New-Item `
-        -Path $destinationPath `
-        -ItemType 'File' `
-        -ErrorAction 'SilentlyContinue' `
-    | Out-Null
+#     New-Item `
+#         -Path $destinationPath `
+#         -ItemType 'File' `
+#         -ErrorAction 'SilentlyContinue' `
+#     | Out-Null
 
-    Set-Content `
-        -Path $destinationPath `
-        -Value (
-            $content `
-            | ConvertTo-Json `
-                -Depth 100
-        )
-}
+#     Set-Content `
+#         -Path $destinationPath `
+#         -Value (
+#             $content `
+#             | ConvertTo-Json `
+#                 -Depth 100
+#         )
+# }
 
 function Build-TemplateConfig {
     param (
@@ -977,19 +971,82 @@ function Build-ResourceTypeSource {
     }
 }
 
+# function Get-WebResponse {
+#     param (
+#         [Parameter(Mandatory = $true)]
+#         [String]
+#         $Uri
+#     )
+
+#     try {
+#         $webrequest = [System.Net.HttpWebRequest]::Create($Uri)
+#         $response = $webrequest.GetResponse()
+#         $responseStream = $response.GetResponseStream()
+#         $streamReader = [System.IO.StreamReader]::new($responseStream)
+    
+#         while ($streamReader.Peek() -ge 0)
+#         {
+#             $streamReader.ReadLine()
+#         }
+#     }
+#     finally {
+#         @(
+#             $response,
+#             $responseStream,
+#             $streamReader
+#         ) `
+#         | ForEach-Object {
+#             if ($_ -is [System.IDisposable]) {
+#                 $_.Dispose()
+#             }
+#         }
+#     }
+# }
+
 function Get-WebResponse {
     param (
         [Parameter(Mandatory = $true)]
         [String]
-        $Uri
+        $Uri,
+
+        [Switch]
+        $AsCustomObject
     )
 
+    $webrequest = [System.Net.HttpWebRequest]::Create($Uri)
+    $response = $webrequest.GetResponse()
+    $responseStream = $response.GetResponseStream()
+    $streamReader = [System.IO.StreamReader]::new($responseStream)
+
+    if ($AsCustomObject) {
+        $result = [PSCustomObject]@{
+            StreamReader = $streamReader
+            Response = $response
+            ResponseStream = $responseStream
+        }
+
+        $result `
+        | Add-Member `
+            -MemberType 'ScriptMethod' `
+            -Name 'Dispose' `
+            -Value {
+                @(
+                    $this.Response,
+                    $this.ResponseStream,
+                    $this.StreamReader
+                ) `
+                | ForEach-Object {
+                    if ($_ -is [System.IDisposable]) {
+                        $_.Dispose()
+                    }
+                }
+            } `
+            -Force
+
+        return $result
+    }
+
     try {
-        $webrequest = [System.Net.HttpWebRequest]::Create($Uri)
-        $response = $webrequest.GetResponse()
-        $responseStream = $response.GetResponseStream()
-        $streamReader = [System.IO.StreamReader]::new($responseStream)
-    
         while ($streamReader.Peek() -ge 0)
         {
             $streamReader.ReadLine()
@@ -1006,6 +1063,323 @@ function Get-WebResponse {
                 $_.Dispose()
             }
         }
+    }
+}
+
+function Get-CheckNameAvailabilityRequest {
+    param (
+        [String]
+        $SubscriptionId,
+
+        [Parameter(Mandatory = $true)]
+        [String]
+        $Provider,
+
+        [Parameter(Mandatory = $true)]
+        [String[]]
+        $ApiVersion,
+
+        [Parameter(Mandatory = $true)]
+        [String]
+        $ResourceType
+    )
+
+    $uriFormat = "https://management.azure.com"
+    $name = 'checkNameAvailability'
+
+    if ($SubscriptionId) {
+        $uriFormat = "$uriFormat/subscriptions/{0}"
+    }
+
+    $uriFormat = "$uriFormat/providers/$Provider/$($name)?api-version={1}"
+
+    $ResourceType = $ResourceType.Split('::')[0]
+
+    $payload = @{
+        name = 'aaaaa'
+        type = $ResourceType
+    }
+
+    $ignoreStatusCode = @(
+        403,
+        404
+    )
+
+    foreach ($apiVersionItem in $ApiVersion) {
+        $uri = $uriFormat -f $SubscriptionId, $apiVersionItem
+
+        $response = Invoke-AzRestMethod `
+            -Uri $uri `
+            -Method 'POST' `
+            -Payload (
+                $payload `
+                | ConvertTo-Json `
+                    -Compress
+            )
+
+        if ($response.StatusCode -eq 200) {
+            if ($response.Content) {
+                $content = $response.Content `
+                | ConvertFrom-Json `
+                    -AsHashtable
+
+                if ($content) {
+                    if ($content.reason -ieq 'Invalid') {
+                        Write-Host $content.message
+
+                        return
+                    }
+                }
+            }
+
+            $payload.name = '{NAME}'
+
+            return [Ordered]@{
+                Method = 'POST'
+                Uri = $uriFormat -f '{0}', $apiVersionItem
+                ApiVersion = $apiVersionItem
+                Body = $payload
+            }
+        }
+    }
+
+    if ($response.StatusCode -notin $ignoreStatusCode) {
+        Write-Host "$($ResourceType): $($response.StatusCode)"
+        Write-Host "Uri: $($uri)"
+
+        if ($response.Content) {
+            Write-Host ($response.Content)
+        }
+    }
+}
+
+function Build-RestApiConfig {
+    param (
+        [Parameter(Mandatory = $true)]
+        [String]
+        $Destination,
+
+        [String]
+        $SubscriptionId
+    )
+
+    New-Item `
+        -Path $Destination `
+        -ItemType 'Directory' `
+        -ErrorAction 'SilentlyContinue' `
+    | Out-Null
+
+    $destinationPath = "$Destination/restApis.json"
+
+    $content = Initialize-Object `
+        -Path $destinationPath
+
+    if (-not $SubscriptionId) {
+        $SubscriptionId = (Get-AzContext).Subscription.Id
+    }
+
+    $lastLine = $null
+    $isTableBody = $false
+    $provider = $false
+
+    $resourceTypeReader = Get-WebResponse `
+        -Uri $Script:AzureUri.ResourceType `
+        -AsCustomObject
+
+    $baseId = 'default.restapis'
+
+    try {
+        Get-WebResponse `
+            -Uri $Script:AzureUri.ResourceNameRule `
+        | ForEach-Object {
+            if ($_ -match ' *##.*') {
+                $provider = @(
+                    (
+                        (
+                            (($_ -replace '#', $null).Trim() -split '\.') `
+                            | Select-Object `
+                                -Skip 1
+                        ) -join '.'
+                    ),
+                    ($provider ?? @())[1]
+                )
+
+                $isTableBody = $false
+            }
+
+            if ($provider[0]) {
+                if (
+                    (-not $provider[1]) `
+                    -or ($provider[1] -ile $provider[0])
+                ) {
+                    while ($resourceTypeReader.StreamReader.Peek() -ge 0) {
+                        if (-not $skipReadLine) {
+                            $line = $resourceTypeReader.StreamReader.ReadLine()
+                        }
+
+                        $skipReadLine = $false
+                
+                        if ($line -imatch '(^ *## *microsoft\.)(.*)') {
+                            $provider[1] = $Matches[2]
+
+                            if ($provider[1] -gt $provider[0]) {
+                                $skipReadLine = $true
+
+                                break
+                            }
+
+                            $providerNamespace = @{}
+                        }
+                        elseif ($line -imatch '(^ *### *microsoft\.)(.*)') {
+                            if ($provider[0] -ieq $provider[1]) {
+                                $namespace = $Matches[2]
+                                $providerNamespace.$namespace = @{
+                                    ApiVersion = [System.Collections.Generic.List[String]]::new()
+                                    Provider = "Microsoft.$($provider[0])"
+                                }
+                            }
+                        }
+                        elseif ($line -match '(\* *\*\*Link\*\*: *)\[(.*)\]') {
+                            if ($provider[0] -ieq $provider[1]) {
+                                $providerNamespaceItem = $providerNamespace.$namespace
+
+                                if ($providerNamespaceItem) {
+                                    $providerNamespaceItem.ApiVersion.Add($Matches[2])
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if ($lastLine -imatch '^ *> *\| *---') {
+                    $isTableBody = $true
+                }
+
+                if ($isTableBody) {
+                    if (-not $_) {
+                        $isTableBody = $false
+                        $provider = @(
+                            $null,
+                            ($provider ?? @())[1]
+                        )
+                        $providerNamespace = @{}
+                        $line = $resourceTypeReader.StreamReader.ReadLine()
+                        $skipReadLine = $true
+                    }
+
+                    if ($_ -imatch '^ *> *\|') {
+                        $cell = ($_ -split '\|')[1..4]
+                        $namespace = @(
+                            (("$($provider[0])/$($cell[0])" -replace ' |\*', $null) -replace '//', '/')
+                        )
+
+                        $namespace += ($namespace[0] -replace '-', $null)
+
+                        foreach ($namespaceItem in $namespace) {
+                            $providerNamespaceItem = $providerNamespace.$namespaceItem
+
+                            if ($providerNamespaceItem) {
+                                switch ($namespaceItem) {
+                                    ('Management/managementGroups') {
+                                        $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                            -Provider $providerNamespaceItem.Provider `
+                                            -ApiVersion $providerNamespaceItem.ApiVersion `
+                                            -ResourceType "Microsoft.$namespaceItem"
+                                    }
+                                    ('Media/mediaservices') {
+                                        $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                            -SubscriptionId $SubscriptionId `
+                                            -Provider $providerNamespaceItem.Provider `
+                                            -ApiVersion $providerNamespaceItem.ApiVersion `
+                                            -ResourceType 'mediaServices'
+                                    }
+                                    ('Search/searchServices') {
+                                        $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                            -SubscriptionId $SubscriptionId `
+                                            -Provider $providerNamespaceItem.Provider `
+                                            -ApiVersion $providerNamespaceItem.ApiVersion `
+                                            -ResourceType 'searchServices'
+                                    }
+                                    { $_.StartsWith('ServiceBus') } {
+                                        $checkNameRequest = (
+                                            ($_ -ieq 'ServiceBus/namespaces') `
+                                            ? (
+                                                Get-CheckNameAvailabilityRequest `
+                                                    -SubscriptionId $SubscriptionId `
+                                                    -Provider $providerNamespaceItem.Provider `
+                                                    -ApiVersion $providerNamespaceItem.ApiVersion `
+                                                    -ResourceType "Microsoft.$namespaceItem"
+                                            ) `
+                                            : $null
+                                        )
+
+                                        $body = $checkNameRequest.Body
+
+                                        if ($body) {
+                                            $body.Remove('type')
+                                        }
+                                    }
+                                    default {
+                                        $checkNameRequest = Get-CheckNameAvailabilityRequest `
+                                            -SubscriptionId $SubscriptionId `
+                                            -Provider $providerNamespaceItem.Provider `
+                                            -ApiVersion $providerNamespaceItem.ApiVersion `
+                                            -ResourceType "Microsoft.$namespaceItem"
+                                    }
+                                }
+
+                                if ($checkNameRequest) {
+                                    $content.$namespaceItem = [Ordered]@{
+                                        '$id' = "$baseId.$($namespaceItem.Replace('.', $null).ToLower())"
+                                        properties = @{
+                                            requests = [Ordered]@{
+                                                checkNameAvailability = $checkNameRequest
+                                                exist = [Ordered]@{
+                                                    Method = 'GET'
+                                                    Uri = "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/$($providerNamespaceItem.Provider)/{2}?api-version=$($providerNamespaceItem.ApiVersion[0])"
+                                                    ApiVersion = $providerNamespaceItem.ApiVersion[0]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                break
+                            }
+                        }
+
+                        if (-not $providerNamespaceItem) {
+                            $namespace[0]
+                        }
+                    }
+                }
+            }
+
+            $lastLine = $_
+        }
+
+        $result = [Ordered]@{
+            '$id' = $baseId
+        }
+
+        $content.GetEnumerator() `
+        | ForEach-Object {
+            $result.($_.Key) = $_.Value
+        }
+
+        New-Item `
+            -Path $destinationPath `
+            -ItemType 'File' `
+            -Value (
+                $result `
+                | ConvertTo-Json `
+                    -Depth 100
+            ) `
+            -Force
+        | Out-Null
+    }
+    finally {
+        $resourceTypeReader.Dispose()
     }
 }
 

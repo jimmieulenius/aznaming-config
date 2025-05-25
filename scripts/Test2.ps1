@@ -146,20 +146,6 @@ function Get-CheckNameAvailabilityRequest {
                     -Compress
             )
 
-        # $response = $httpClient.PostAsync(
-        #     $uri,
-        #     [System.Net.Http.StringContent]::new(
-        #         (
-        #             $body `
-        #             | ConvertTo-Json `
-        #                 -Compress
-        #         ),
-        #         [System.Text.Encoding]::UTF8, 'application/json'
-        #     )
-        # ).
-        # GetAwaiter(). `
-        # GetResult()
-
         if ($response.StatusCode -eq 200) {
             if ($response.Content) {
                 $content = $response.Content `
@@ -175,7 +161,6 @@ function Get-CheckNameAvailabilityRequest {
                 }
             }
 
-            # [Hashtable] $body = $body
             $payload.name = '{NAME}'
 
             return [Ordered]@{
