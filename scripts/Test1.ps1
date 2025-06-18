@@ -1,14 +1,14 @@
 Import-Module `
-    -Name "$PSScriptRoot/AzNaming.Config" `
+    -Name "$PSScriptRoot/AzNaming.Config.psm1" `
     -Force
 
-Build-LocationSource `
-    -Destination "$PSScriptRoot/../src"
+# Build-LocationSource `
+#     -Destination "$PSScriptRoot/../src"
 
 # Initialize-ResourceTypeConfig `
 #     -Destination "$PSScriptRoot/../src"
 
-# Build-Config
+Build-Config
 
 exit
 

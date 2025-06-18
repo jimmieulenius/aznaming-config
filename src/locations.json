@@ -35,6 +35,9 @@
   "CentralUSEUAP": {
     "abbreviation": "usce"
   },
+  "ChileCentral": {
+    "abbreviation": "<TODO>"
+  },
   "EastAsia": {
     "abbreviation": "ase"
   },
@@ -62,6 +65,9 @@
   "GermanyWestCentral": {
     "abbreviation": "gwc"
   },
+  "IndonesiaCentral": {
+    "abbreviation": "<TODO>"
+  },
   "IsraelCentral": {
     "abbreviation": "isc"
   },
@@ -85,6 +91,9 @@
   },
   "KoreaSouth": {
     "abbreviation": "krs"
+  },
+  "MalaysiaWest": {
+    "abbreviation": "<TODO>"
   },
   "MexicoCentral": {
     "abbreviation": "mxc"

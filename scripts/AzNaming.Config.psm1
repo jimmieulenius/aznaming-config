@@ -144,8 +144,8 @@ function Build-ComponentConfig {
 }
 
 function Build-Config {
-    $sourcePath = "$PSScriptRoot/../../src"
-    $configBasePath = "$PSScriptRoot/../../config"
+    $sourcePath = "$PSScriptRoot/../src"
+    $configBasePath = "$PSScriptRoot/../config"
     $configComponentPath = "$configBasePath/components"
 
     $sourceFile = Build-ResourceTypeSource `
@@ -596,7 +596,7 @@ function Build-TemplateConfig {
                 $values.SEPARATOR = $null
             }
 
-            if ($_.Value.validText -ieq 'Alphanumerics and underscores. Start with letter.') {
+            if ($_.Value.validText -ilike 'Alphanumerics and underscores*') {
                 $values.SEPARATOR = '_'
             }
 

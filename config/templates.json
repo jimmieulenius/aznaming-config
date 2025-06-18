@@ -1399,7 +1399,10 @@
       "invalidCharactersEnd": "",
       "invalidCharactersConsecutive": "",
       "regex": "^[a-zA-Z0-9_]{1,80}$",
-      "staticValue": ""
+      "staticValue": "",
+      "values": {
+        "SEPARATOR": "_"
+      }
     }
   },
   "Compute/disks::DataDisk": {
@@ -1417,7 +1420,10 @@
       "invalidCharactersEnd": "",
       "invalidCharactersConsecutive": "",
       "regex": "^[a-zA-Z0-9_]{1,80}$",
-      "staticValue": ""
+      "staticValue": "",
+      "values": {
+        "SEPARATOR": "_"
+      }
     }
   },
   "Compute/disks::OSDisk": {
@@ -1435,7 +1441,10 @@
       "invalidCharactersEnd": "",
       "invalidCharactersConsecutive": "",
       "regex": "^[a-zA-Z0-9_]{1,80}$",
-      "staticValue": ""
+      "staticValue": "",
+      "values": {
+        "SEPARATOR": "_"
+      }
     }
   },
   "Compute/galleries": {
